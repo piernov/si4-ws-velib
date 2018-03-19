@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://tempuri.org/" name="VelibSoapService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xs:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="GetContracts">
+        <xs:complexType>
+          <xs:sequence />
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetContractsResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="1" name="GetContractsResult" type="tns:ArrayOfVelibSoapContract" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetStations">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="1" name="contract" type="tns:VelibSoapContract" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="GetStationsResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="1" name="GetStationsResult" type="tns:ArrayOfVelibSoapStation" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:complexType name="ArrayOfVelibSoapContract">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="VelibSoapContract" nillable="true" type="tns:VelibSoapContract" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="VelibSoapContract">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="1" name="Name" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Cities" type="tns:ArrayOfString" />
+          <xs:element minOccurs="0" maxOccurs="1" name="CommercialName" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="CountryCode" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ArrayOfVelibSoapStation">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="VelibSoapStation" nillable="true" type="tns:VelibSoapStation" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ArrayOfString">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="VelibSoapStation">
+        <xs:sequence>
+          <xs:element minOccurs="1" maxOccurs="1" name="Number" type="xs:int" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Name" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="Address" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="1" name="ContractName" type="xs:string" />
+          <xs:element minOccurs="1" maxOccurs="1" name="BikeStands" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="AvailableBikeStands" type="xs:int" />
+          <xs:element minOccurs="1" maxOccurs="1" name="AvailableBikes" type="xs:int" />
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="IVelibSoapService_GetContracts_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetContracts" />
+  </wsdl:message>
+  <wsdl:message name="IVelibSoapService_GetContracts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetContractsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IVelibSoapService_GetStations_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStations" />
+  </wsdl:message>
+  <wsdl:message name="IVelibSoapService_GetStations_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStationsResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IVelibSoapService">
+    <wsdl:operation name="GetContracts">
+      <wsdl:input message="tns:IVelibSoapService_GetContracts_InputMessage" />
+      <wsdl:output message="tns:IVelibSoapService_GetContracts_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStations">
+      <wsdl:input message="tns:IVelibSoapService_GetStations_InputMessage" />
+      <wsdl:output message="tns:IVelibSoapService_GetStations_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IVelibSoapService" type="tns:IVelibSoapService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetContracts">
+      <soap:operation soapAction="http://tempuri.org/IVelibSoapService/GetContracts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStations">
+      <soap:operation soapAction="http://tempuri.org/IVelibSoapService/GetStations" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="VelibSoapService">
+    <wsdl:port name="BasicHttpBinding_IVelibSoapService" binding="tns:BasicHttpBinding_IVelibSoapService">
+      <soap:address location="http://localhost:5050/VelibSoapService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

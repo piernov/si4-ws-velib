@@ -11,9 +11,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VelibSoapWebApplication", "
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{59EBB832-DDCE-41ED-8BB4-3D048C6B3737}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JCDecauxAPILibrary", "JCDecauxAPILibrary\JCDecauxAPILibrary.csproj", "{2B381AA2-04E1-4B8F-A5A6-43B19F10A6D9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JCDecauxAPILibrary", "JCDecauxAPILibrary\JCDecauxAPILibrary.csproj", "{2B381AA2-04E1-4B8F-A5A6-43B19F10A6D9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VelibSoapServiceLibrary", "VelibSoapServiceLibrary\VelibSoapServiceLibrary.csproj", "{233B6FAD-4892-42E3-90C3-82631B1672D5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VelibSoapServiceLibrary", "VelibSoapServiceLibrary\VelibSoapServiceLibrary.csproj", "{233B6FAD-4892-42E3-90C3-82631B1672D5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VelibSoapClientWinForms", "VelibSoapClientWinForms\VelibSoapClientWinForms.csproj", "{945BE5D9-66F3-41E3-9698-1B2A0607A637}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{233B6FAD-4892-42E3-90C3-82631B1672D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{233B6FAD-4892-42E3-90C3-82631B1672D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{233B6FAD-4892-42E3-90C3-82631B1672D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{945BE5D9-66F3-41E3-9698-1B2A0607A637}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{945BE5D9-66F3-41E3-9698-1B2A0607A637}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{945BE5D9-66F3-41E3-9698-1B2A0607A637}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{945BE5D9-66F3-41E3-9698-1B2A0607A637}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
