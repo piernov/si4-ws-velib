@@ -6,7 +6,7 @@
   },
   "ExtendedData": {
     "Uri": "http://localhost:51460/VelibSoapService.svc",
-    "Namespace": "VelibSoapServiceReference",
+    "Namespace": "ServiceReference1",
     "SelectedAccessLevelForGeneratedClass": "Public",
     "GenerateMessageContract": false,
     "ReuseTypesinReferencedAssemblies": false,
@@ -21,7 +21,7 @@
     },
     "CheckedReferencedAssemblies": [],
     "InstanceId": null,
-    "Name": "VelibSoapServiceReference",
+    "Name": "ServiceReference1",
     "Metadata": {}
   }
 }

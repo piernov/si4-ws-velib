@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace JCDecauxAPI
+namespace JCDecauxAPILibrary
 {
     public class JCDecauxContract
     {

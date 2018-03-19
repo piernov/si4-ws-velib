@@ -1,7 +1,7 @@
-﻿using System;
+﻿using ServiceReference1;
+using System;
 using System.Collections.Generic;
 using System.Text;
-using VelibSoapServiceReference;
 
 namespace VelibSoapClientConsole
 {

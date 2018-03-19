@@ -7,7 +7,7 @@
 // </généré automatiquement>
 //------------------------------------------------------------------------------
 
-namespace VelibSoapServiceReference
+namespace ServiceReference1
 {
     using System.Runtime.Serialization;
     
@@ -192,25 +192,25 @@ namespace VelibSoapServiceReference
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="VelibSoapServiceReference.IVelibSoapService")]
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReference1.IVelibSoapService")]
     public interface IVelibSoapService
     {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IVelibSoapService/GetContracts", ReplyAction="http://tempuri.org/IVelibSoapService/GetContractsResponse")]
-        System.Threading.Tasks.Task<VelibSoapServiceReference.VelibSoapContract[]> GetContractsAsync();
+        System.Threading.Tasks.Task<ServiceReference1.VelibSoapContract[]> GetContractsAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IVelibSoapService/GetStations", ReplyAction="http://tempuri.org/IVelibSoapService/GetStationsResponse")]
-        System.Threading.Tasks.Task<VelibSoapServiceReference.VelibSoapStation[]> GetStationsAsync(VelibSoapServiceReference.VelibSoapContract contract);
+        System.Threading.Tasks.Task<ServiceReference1.VelibSoapStation[]> GetStationsAsync(ServiceReference1.VelibSoapContract contract);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.0")]
-    public interface IVelibSoapServiceChannel : VelibSoapServiceReference.IVelibSoapService, System.ServiceModel.IClientChannel
+    public interface IVelibSoapServiceChannel : ServiceReference1.IVelibSoapService, System.ServiceModel.IClientChannel
     {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.0")]
-    public partial class VelibSoapServiceClient : System.ServiceModel.ClientBase<VelibSoapServiceReference.IVelibSoapService>, VelibSoapServiceReference.IVelibSoapService
+    public partial class VelibSoapServiceClient : System.ServiceModel.ClientBase<ServiceReference1.IVelibSoapService>, ServiceReference1.IVelibSoapService
     {
         
     /// <summary>
@@ -253,12 +253,12 @@ namespace VelibSoapServiceReference
         {
         }
         
-        public System.Threading.Tasks.Task<VelibSoapServiceReference.VelibSoapContract[]> GetContractsAsync()
+        public System.Threading.Tasks.Task<ServiceReference1.VelibSoapContract[]> GetContractsAsync()
         {
             return base.Channel.GetContractsAsync();
         }
         
-        public System.Threading.Tasks.Task<VelibSoapServiceReference.VelibSoapStation[]> GetStationsAsync(VelibSoapServiceReference.VelibSoapContract contract)
+        public System.Threading.Tasks.Task<ServiceReference1.VelibSoapStation[]> GetStationsAsync(ServiceReference1.VelibSoapContract contract)
         {
             return base.Channel.GetStationsAsync(contract);
         }

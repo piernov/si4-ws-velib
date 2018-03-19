@@ -1,4 +1,4 @@
-﻿namespace JCDecauxAPI
+﻿namespace JCDecauxAPILibrary
 {
     public class JCDecauxStation
     {
