@@ -1,11 +1,8 @@
 ﻿{
   "ProviderId": "Microsoft.VisualStudio.ConnectedService.Wcf",
   "Version": "15.0.20119.1312",
-  "GettingStartedDocument": {
-    "Uri": "https://go.microsoft.com/fwlink/?linkid=858517"
-  },
   "ExtendedData": {
-    "Uri": "http://localhost:51460/VelibSoapService.svc",
+    "Uri": "http://localhost:5050/VelibSoapService.svc",
     "Namespace": "ServiceReference1",
     "SelectedAccessLevelForGeneratedClass": "Public",
     "GenerateMessageContract": false,

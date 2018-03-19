@@ -4,55 +4,54 @@ using System.ServiceModel;
 
 namespace VelibSoapServiceLibrary
 {
-    // REMARQUE : vous pouvez utiliser la commande Renommer du menu Refactoriser pour changer le nom d'interface "IService1" à la fois dans le code et le fichier de configuration.
     [ServiceContract]
     public interface IVelibSoapService
     {
         [OperationContract]
-        List<VelibSoapContract> GetContracts();
+        VelibSoapContract[] GetContracts();
 
         [OperationContract]
-        List<VelibSoapStation> GetStations(VelibSoapContract contract);
+        VelibSoapStation[] GetStations(VelibSoapContract contract);
     }
 
     [DataContract]
     public class VelibSoapContract
     {
         [DataMember]
-        public string Name;
+        public string Name { get; set; }
 
         [DataMember]
-        public List<string> Cities;
+        public string[] Cities { get; set; } // array because SoapCore won't serialize List properly
 
         [DataMember]
-        public string CommercialName;
+        public string CommercialName { get; set; }
 
         [DataMember]
-        public string CountryCode;
+        public string CountryCode { get; set; }
     }
 
     [DataContract]
     public class VelibSoapStation
     {
         [DataMember]
-        public int Number;
+        public int Number { get; set; }
 
         [DataMember]
-        public string Name;
+        public string Name { get; set; }
 
         [DataMember]
-        public string Address;
+        public string Address { get; set; }
 
         [DataMember]
-        public string ContractName;
+        public string ContractName { get; set; }
 
         [DataMember]
-        public int BikeStands;
+        public int BikeStands { get; set; }
 
         [DataMember]
-        public int AvailableBikeStands;
+        public int AvailableBikeStands { get; set; }
 
         [DataMember]
-        public int AvailableBikes;
+        public int AvailableBikes { get; set; }
     }
 }

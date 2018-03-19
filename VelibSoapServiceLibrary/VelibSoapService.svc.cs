@@ -4,32 +4,32 @@ using System.Linq;
 
 namespace VelibSoapServiceLibrary
 {
-    // REMARQUE : pour lancer le client test WCF afin de tester ce service, sélectionnez Service1.svc ou Service1.svc.cs dans l'Explorateur de solutions et démarrez le débogage.
     public class VelibSoapService : IVelibSoapService
     {
         private JCDecauxRESTClient jCDecauxRESTClient;
 
-        VelibSoapService()
+        public VelibSoapService()
         {
             jCDecauxRESTClient = new JCDecauxRESTClient();
         }
 
-        public List<VelibSoapContract> GetContracts()
+        public VelibSoapContract[]  GetContracts()
         {
             return jCDecauxRESTClient.GetContracts().Select(c => new VelibSoapContract()
             {
-                Cities = c.cities,
+                Cities = c.cities.ToArray(),
                 Name = c.name,
                 CommercialName = c.commercial_name,
                 CountryCode = c.country_code
-            }).ToList();
+            })
+            .ToArray();
         }
 
-        public List<VelibSoapStation> GetStations(VelibSoapContract contract)
+        public VelibSoapStation[] GetStations(VelibSoapContract contract)
         {
             return jCDecauxRESTClient.GetStations(new JCDecauxContract()
             {
-                cities = contract.Cities,
+                cities = contract.Cities.ToList(),
                 name = contract.Name,
                 country_code = contract.CountryCode,
                 commercial_name = contract.CommercialName
@@ -42,7 +42,8 @@ namespace VelibSoapServiceLibrary
                 BikeStands = s.bike_stands,
                 AvailableBikeStands = s.available_bike_stands,
                 AvailableBikes = s.available_bikes
-            }).ToList();
+            })
+            .ToArray();
         }
     }
 }

@@ -3,6 +3,8 @@ version: '3'
 services:
   velibsoapwebapplication:
     image: velibsoapwebapplication
+    ports:
+      - "5050:5050"
     build:
       context: .
       dockerfile: VelibSoapWebApplication/Dockerfile

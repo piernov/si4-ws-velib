@@ -27,8 +27,8 @@ namespace VelibSoapWebApplication
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            //services.AddMvc();
             services.TryAddSingleton<VelibSoapService>();
+            services.AddMvc();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -39,9 +39,9 @@ namespace VelibSoapWebApplication
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseSoapEndpoint<VelibSoapService>("/VelibSoapService.svc", new BasicHttpBinding());
+            app.UseSoapEndpoint<VelibSoapService>("/VelibSoapService.svc", new BasicHttpBinding(), SoapSerializer.XmlSerializer);
 
-            //app.UseMvc();
+            app.UseMvc();
         }
     }
 }
