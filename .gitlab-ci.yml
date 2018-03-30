@@ -6,9 +6,10 @@ services:
   - docker:dind
 
 before_script:
+  - apk update
   - apk add docker
-  - docker info
   - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN $CI_REGISTRY
+  - docker info
 
 build:
   stage: build
