@@ -1,3 +1,4 @@
 build:
   script:
+   - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN gitlab.miaounyan.eu:5005
    - kompose up -v
