@@ -1,7 +1,7 @@
 image:
 #  name: docker:latest
   name: femtopixel/kompose:latest
-entrypoint: [""]
+  entrypoint: [""]
 
 services:
   - docker:dind
