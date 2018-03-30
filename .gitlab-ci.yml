@@ -1,4 +1,6 @@
-image: femtopixel/kompose:latest
+image:
+  name: femtopixel/kompose:latest
+  entrypoint: [""]
 
 services:
   - docker:dind
