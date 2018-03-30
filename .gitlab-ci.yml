@@ -7,9 +7,9 @@ services:
   - docker:dind
 
 before_script:
-  - apk update
-  - apk add docker
-  - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN $CI_REGISTRY
+#  - apk update
+#  - apk add docker
+  - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN gitlab.miaounyan.eu:5005
   - docker info
 
 build:
