@@ -1,3 +1,3 @@
 build:
   script:
-   - kompose up
+   - kompose up -v
