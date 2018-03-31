@@ -13,9 +13,6 @@ before_script:
   - apk update
   - apk add docker
   - docker info
-  - mkdir /etc/docker/
-  - 'echo "{ \"insecure-registries\" : [\"gitlab.miaounyan.eu:5005\"] }" > /etc/docker/daemon.json'
-  - cat /etc/docker/daemon.json
   - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN gitlab.miaounyan.eu:5005
 
 build:
