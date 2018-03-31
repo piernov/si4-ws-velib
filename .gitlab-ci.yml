@@ -12,6 +12,7 @@ variables:
 before_script:
   - apk update
   - apk add docker
+  - echo $CI_JOB_TOKEN
   - docker info
   - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN gitlab.miaounyan.eu:5005
 
