@@ -1,1 +1,1 @@
-﻿<%@ ServiceHost Language="C#" Debug="true" Service="VelibSoap.VelibSoapService" CodeBehind="VelibSoapService.svc.cs" %>
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="VelibSoapServiceLibrary.VelibSoapService" %>

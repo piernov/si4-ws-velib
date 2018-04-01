@@ -45,6 +45,13 @@
     <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="System.IdentityModel" />
+    <Reference Include="System.ServiceModel.Http, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ServiceModel.Http.4.4.1\lib\net461\System.ServiceModel.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceModel.Primitives, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ServiceModel.Primitives.4.4.1\lib\net461\System.ServiceModel.Primitives.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -68,10 +75,6 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="VelibSoapService.svc.cs">
-      <DependentUpon>VelibSoapService.svc</DependentUpon>
-    </Compile>
-    <Compile Include="IVelibSoapService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -87,9 +90,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\JCDecauxAPILibrary\JCDecauxAPILibrary.csproj">
-      <Project>{2b381aa2-04e1-4b8f-a5a6-43b19f10a6d9}</Project>
-      <Name>JCDecauxAPILibrary</Name>
+    <ProjectReference Include="..\VelibSoapServiceLibrary\VelibSoapServiceLibrary.csproj">
+      <Project>{233b6fad-4892-42e3-90c3-82631b1672d5}</Project>
+      <Name>VelibSoapServiceLibrary</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
