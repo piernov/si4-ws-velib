@@ -69,7 +69,22 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="Connected Services\VelibSoapServiceReference\VelibSoapClientWinForms.VelibSoapServiceReference.ArrayOfString.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\VelibSoapServiceReference\VelibSoapClientWinForms.VelibSoapServiceReference.GetContractByNameResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\VelibSoapServiceReference\VelibSoapClientWinForms.VelibSoapServiceReference.GetContractsNameResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\VelibSoapServiceReference\VelibSoapClientWinForms.VelibSoapServiceReference.GetContractsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\VelibSoapServiceReference\VelibSoapClientWinForms.VelibSoapServiceReference.GetStationByNameResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\VelibSoapServiceReference\VelibSoapClientWinForms.VelibSoapServiceReference.GetStationsNameResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\VelibSoapServiceReference\VelibSoapClientWinForms.VelibSoapServiceReference.GetStationsResponse.datasource">

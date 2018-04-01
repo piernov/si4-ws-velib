@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="98476fe8-0969-4b4f-a1b8-1aaa92db3ce1" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="5060177c-6cce-4b23-998a-bc7efe3911b9" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -22,7 +22,7 @@
     <MetadataSource Address="http://localhost:5050/VelibSoapService.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="VelibSoapService.wsdl" MetadataType="Wsdl" ID="223979d0-2277-4dc1-84c8-1944a45328d6" SourceId="1" SourceUrl="http://localhost:5050/VelibSoapService.svc" />
+    <MetadataFile FileName="VelibSoapService.wsdl" MetadataType="Wsdl" ID="2b63feff-22ad-463d-8a0f-dc2407af0910" SourceId="1" SourceUrl="http://localhost:5050/VelibSoapService.svc" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

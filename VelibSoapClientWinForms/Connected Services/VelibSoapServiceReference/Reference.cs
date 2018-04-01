@@ -8,569 +8,867 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace VelibSoapClientWinForms
+namespace VelibSoapClientWinForms.VelibSoapServiceReference
 {
-    namespace VelibSoapServiceReference
-    {
-        using System.Runtime.Serialization;
-        using System;
-
-
-        [System.Diagnostics.DebuggerStepThroughAttribute()]
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-        [System.Runtime.Serialization.DataContractAttribute(Name = "VelibSoapContract", Namespace = "http://tempuri.org/")]
-        [System.SerializableAttribute()]
-        public partial class VelibSoapContract : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged
-        {
-
-            [System.NonSerializedAttribute()]
-            private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-
-            [System.Runtime.Serialization.OptionalFieldAttribute()]
-            private string NameField;
-
-            [System.Runtime.Serialization.OptionalFieldAttribute()]
-            private VelibSoapServiceReference.ArrayOfString CitiesField;
-
-            [System.Runtime.Serialization.OptionalFieldAttribute()]
-            private string CommercialNameField;
-
-            [System.Runtime.Serialization.OptionalFieldAttribute()]
-            private string CountryCodeField;
-
-            [global::System.ComponentModel.BrowsableAttribute(false)]
-            public System.Runtime.Serialization.ExtensionDataObject ExtensionData
-            {
-                get
-                {
-                    return this.extensionDataField;
-                }
-                set
-                {
-                    this.extensionDataField = value;
-                }
+    using System.Runtime.Serialization;
+    using System;
+    
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="VelibSoapContract", Namespace="http://tempuri.org/")]
+    [System.SerializableAttribute()]
+    public partial class VelibSoapContract : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private VelibSoapServiceReference.ArrayOfString CitiesField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CommercialNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string CountryCodeField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
             }
-
-            [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue = false)]
-            public string Name
-            {
-                get
-                {
-                    return this.NameField;
-                }
-                set
-                {
-                    if ((object.ReferenceEquals(this.NameField, value) != true))
-                    {
-                        this.NameField = value;
-                        this.RaisePropertyChanged("Name");
-                    }
-                }
+            set {
+                this.extensionDataField = value;
             }
-
-            [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue = false, Order = 1)]
-            public VelibSoapServiceReference.ArrayOfString Cities
-            {
-                get
-                {
-                    return this.CitiesField;
-                }
-                set
-                {
-                    if ((object.ReferenceEquals(this.CitiesField, value) != true))
-                    {
-                        this.CitiesField = value;
-                        this.RaisePropertyChanged("Cities");
-                    }
-                }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public string Name {
+            get {
+                return this.NameField;
             }
-
-            [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue = false, Order = 2)]
-            public string CommercialName
-            {
-                get
-                {
-                    return this.CommercialNameField;
-                }
-                set
-                {
-                    if ((object.ReferenceEquals(this.CommercialNameField, value) != true))
-                    {
-                        this.CommercialNameField = value;
-                        this.RaisePropertyChanged("CommercialName");
-                    }
-                }
-            }
-
-            [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue = false, Order = 3)]
-            public string CountryCode
-            {
-                get
-                {
-                    return this.CountryCodeField;
-                }
-                set
-                {
-                    if ((object.ReferenceEquals(this.CountryCodeField, value) != true))
-                    {
-                        this.CountryCodeField = value;
-                        this.RaisePropertyChanged("CountryCode");
-                    }
-                }
-            }
-
-            public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-
-            protected void RaisePropertyChanged(string propertyName)
-            {
-                System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-                if ((propertyChanged != null))
-                {
-                    propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            set {
+                if ((object.ReferenceEquals(this.NameField, value) != true)) {
+                    this.NameField = value;
+                    this.RaisePropertyChanged("Name");
                 }
             }
         }
-
-        [System.Diagnostics.DebuggerStepThroughAttribute()]
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-        [System.Runtime.Serialization.CollectionDataContractAttribute(Name = "ArrayOfString", Namespace = "http://tempuri.org/", ItemName = "string")]
-        [System.SerializableAttribute()]
-        public class ArrayOfString : System.Collections.Generic.List<string>
-        {
-        }
-
-        [System.Diagnostics.DebuggerStepThroughAttribute()]
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-        [System.Runtime.Serialization.DataContractAttribute(Name = "VelibSoapStation", Namespace = "http://tempuri.org/")]
-        [System.SerializableAttribute()]
-        public partial class VelibSoapStation : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged
-        {
-
-            [System.NonSerializedAttribute()]
-            private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-
-            private int NumberField;
-
-            [System.Runtime.Serialization.OptionalFieldAttribute()]
-            private string NameField;
-
-            [System.Runtime.Serialization.OptionalFieldAttribute()]
-            private string AddressField;
-
-            [System.Runtime.Serialization.OptionalFieldAttribute()]
-            private string ContractNameField;
-
-            private int BikeStandsField;
-
-            private int AvailableBikeStandsField;
-
-            private int AvailableBikesField;
-
-            [global::System.ComponentModel.BrowsableAttribute(false)]
-            public System.Runtime.Serialization.ExtensionDataObject ExtensionData
-            {
-                get
-                {
-                    return this.extensionDataField;
-                }
-                set
-                {
-                    this.extensionDataField = value;
-                }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
+        public VelibSoapServiceReference.ArrayOfString Cities {
+            get {
+                return this.CitiesField;
             }
-
-            [System.Runtime.Serialization.DataMemberAttribute(IsRequired = true)]
-            public int Number
-            {
-                get
-                {
-                    return this.NumberField;
-                }
-                set
-                {
-                    if ((this.NumberField.Equals(value) != true))
-                    {
-                        this.NumberField = value;
-                        this.RaisePropertyChanged("Number");
-                    }
-                }
-            }
-
-            [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue = false, Order = 1)]
-            public string Name
-            {
-                get
-                {
-                    return this.NameField;
-                }
-                set
-                {
-                    if ((object.ReferenceEquals(this.NameField, value) != true))
-                    {
-                        this.NameField = value;
-                        this.RaisePropertyChanged("Name");
-                    }
-                }
-            }
-
-            [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue = false, Order = 2)]
-            public string Address
-            {
-                get
-                {
-                    return this.AddressField;
-                }
-                set
-                {
-                    if ((object.ReferenceEquals(this.AddressField, value) != true))
-                    {
-                        this.AddressField = value;
-                        this.RaisePropertyChanged("Address");
-                    }
-                }
-            }
-
-            [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue = false, Order = 3)]
-            public string ContractName
-            {
-                get
-                {
-                    return this.ContractNameField;
-                }
-                set
-                {
-                    if ((object.ReferenceEquals(this.ContractNameField, value) != true))
-                    {
-                        this.ContractNameField = value;
-                        this.RaisePropertyChanged("ContractName");
-                    }
-                }
-            }
-
-            [System.Runtime.Serialization.DataMemberAttribute(IsRequired = true, Order = 4)]
-            public int BikeStands
-            {
-                get
-                {
-                    return this.BikeStandsField;
-                }
-                set
-                {
-                    if ((this.BikeStandsField.Equals(value) != true))
-                    {
-                        this.BikeStandsField = value;
-                        this.RaisePropertyChanged("BikeStands");
-                    }
-                }
-            }
-
-            [System.Runtime.Serialization.DataMemberAttribute(IsRequired = true, Order = 5)]
-            public int AvailableBikeStands
-            {
-                get
-                {
-                    return this.AvailableBikeStandsField;
-                }
-                set
-                {
-                    if ((this.AvailableBikeStandsField.Equals(value) != true))
-                    {
-                        this.AvailableBikeStandsField = value;
-                        this.RaisePropertyChanged("AvailableBikeStands");
-                    }
-                }
-            }
-
-            [System.Runtime.Serialization.DataMemberAttribute(IsRequired = true, Order = 6)]
-            public int AvailableBikes
-            {
-                get
-                {
-                    return this.AvailableBikesField;
-                }
-                set
-                {
-                    if ((this.AvailableBikesField.Equals(value) != true))
-                    {
-                        this.AvailableBikesField = value;
-                        this.RaisePropertyChanged("AvailableBikes");
-                    }
-                }
-            }
-
-            public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-
-            protected void RaisePropertyChanged(string propertyName)
-            {
-                System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-                if ((propertyChanged != null))
-                {
-                    propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            set {
+                if ((object.ReferenceEquals(this.CitiesField, value) != true)) {
+                    this.CitiesField = value;
+                    this.RaisePropertyChanged("Cities");
                 }
             }
         }
-
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-        [System.ServiceModel.ServiceContractAttribute(ConfigurationName = "VelibSoapServiceReference.IVelibSoapService")]
-        public interface IVelibSoapService
-        {
-
-            // CODEGEN : La génération du contrat de message depuis le nom d'élément GetContractsResult de l'espace de noms http://tempuri.org/ n'est pas marqué nillable
-            [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IVelibSoapService/GetContracts", ReplyAction = "*")]
-            VelibSoapServiceReference.GetContractsResponse GetContracts(VelibSoapServiceReference.GetContractsRequest request);
-
-            [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IVelibSoapService/GetContracts", ReplyAction = "*")]
-            System.Threading.Tasks.Task<VelibSoapServiceReference.GetContractsResponse> GetContractsAsync(VelibSoapServiceReference.GetContractsRequest request);
-
-            // CODEGEN : La génération du contrat de message depuis le nom d'élément contract de l'espace de noms http://tempuri.org/ n'est pas marqué nillable
-            [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IVelibSoapService/GetStations", ReplyAction = "*")]
-            VelibSoapServiceReference.GetStationsResponse GetStations(VelibSoapServiceReference.GetStationsRequest request);
-
-            [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IVelibSoapService/GetStations", ReplyAction = "*")]
-            System.Threading.Tasks.Task<VelibSoapServiceReference.GetStationsResponse> GetStationsAsync(VelibSoapServiceReference.GetStationsRequest request);
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
+        public string CommercialName {
+            get {
+                return this.CommercialNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CommercialNameField, value) != true)) {
+                    this.CommercialNameField = value;
+                    this.RaisePropertyChanged("CommercialName");
+                }
+            }
         }
-
-        [System.Diagnostics.DebuggerStepThroughAttribute()]
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=3)]
+        public string CountryCode {
+            get {
+                return this.CountryCodeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CountryCodeField, value) != true)) {
+                    this.CountryCodeField = value;
+                    this.RaisePropertyChanged("CountryCode");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.CollectionDataContractAttribute(Name="ArrayOfString", Namespace="http://tempuri.org/", ItemName="string")]
+    [System.SerializableAttribute()]
+    public class ArrayOfString : System.Collections.Generic.List<string> {
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="VelibSoapStation", Namespace="http://tempuri.org/")]
+    [System.SerializableAttribute()]
+    public partial class VelibSoapStation : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        private int NumberField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string AddressField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ContractNameField;
+        
+        private int BikeStandsField;
+        
+        private int AvailableBikeStandsField;
+        
+        private int AvailableBikesField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public int Number {
+            get {
+                return this.NumberField;
+            }
+            set {
+                if ((this.NumberField.Equals(value) != true)) {
+                    this.NumberField = value;
+                    this.RaisePropertyChanged("Number");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
+        public string Name {
+            get {
+                return this.NameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NameField, value) != true)) {
+                    this.NameField = value;
+                    this.RaisePropertyChanged("Name");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
+        public string Address {
+            get {
+                return this.AddressField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.AddressField, value) != true)) {
+                    this.AddressField = value;
+                    this.RaisePropertyChanged("Address");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=3)]
+        public string ContractName {
+            get {
+                return this.ContractNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ContractNameField, value) != true)) {
+                    this.ContractNameField = value;
+                    this.RaisePropertyChanged("ContractName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=4)]
+        public int BikeStands {
+            get {
+                return this.BikeStandsField;
+            }
+            set {
+                if ((this.BikeStandsField.Equals(value) != true)) {
+                    this.BikeStandsField = value;
+                    this.RaisePropertyChanged("BikeStands");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=5)]
+        public int AvailableBikeStands {
+            get {
+                return this.AvailableBikeStandsField;
+            }
+            set {
+                if ((this.AvailableBikeStandsField.Equals(value) != true)) {
+                    this.AvailableBikeStandsField = value;
+                    this.RaisePropertyChanged("AvailableBikeStands");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=6)]
+        public int AvailableBikes {
+            get {
+                return this.AvailableBikesField;
+            }
+            set {
+                if ((this.AvailableBikesField.Equals(value) != true)) {
+                    this.AvailableBikesField = value;
+                    this.RaisePropertyChanged("AvailableBikes");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="VelibSoapServiceReference.IVelibSoapService")]
+    public interface IVelibSoapService {
+        
+        // CODEGEN : La génération du contrat de message depuis le nom d'élément GetContractsResult de l'espace de noms http://tempuri.org/ n'est pas marqué nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IVelibSoapService/GetContracts", ReplyAction="*")]
+        VelibSoapServiceReference.GetContractsResponse GetContracts(VelibSoapServiceReference.GetContractsRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IVelibSoapService/GetContracts", ReplyAction="*")]
+        System.Threading.Tasks.Task<VelibSoapServiceReference.GetContractsResponse> GetContractsAsync(VelibSoapServiceReference.GetContractsRequest request);
+        
+        // CODEGEN : La génération du contrat de message depuis le nom d'élément GetContractsNameResult de l'espace de noms http://tempuri.org/ n'est pas marqué nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IVelibSoapService/GetContractsName", ReplyAction="*")]
+        VelibSoapServiceReference.GetContractsNameResponse GetContractsName(VelibSoapServiceReference.GetContractsNameRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IVelibSoapService/GetContractsName", ReplyAction="*")]
+        System.Threading.Tasks.Task<VelibSoapServiceReference.GetContractsNameResponse> GetContractsNameAsync(VelibSoapServiceReference.GetContractsNameRequest request);
+        
+        // CODEGEN : La génération du contrat de message depuis le nom d'élément name de l'espace de noms http://tempuri.org/ n'est pas marqué nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IVelibSoapService/GetContractByName", ReplyAction="*")]
+        VelibSoapServiceReference.GetContractByNameResponse GetContractByName(VelibSoapServiceReference.GetContractByNameRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IVelibSoapService/GetContractByName", ReplyAction="*")]
+        System.Threading.Tasks.Task<VelibSoapServiceReference.GetContractByNameResponse> GetContractByNameAsync(VelibSoapServiceReference.GetContractByNameRequest request);
+        
+        // CODEGEN : La génération du contrat de message depuis le nom d'élément contract de l'espace de noms http://tempuri.org/ n'est pas marqué nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IVelibSoapService/GetStations", ReplyAction="*")]
+        VelibSoapServiceReference.GetStationsResponse GetStations(VelibSoapServiceReference.GetStationsRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IVelibSoapService/GetStations", ReplyAction="*")]
+        System.Threading.Tasks.Task<VelibSoapServiceReference.GetStationsResponse> GetStationsAsync(VelibSoapServiceReference.GetStationsRequest request);
+        
+        // CODEGEN : La génération du contrat de message depuis le nom d'élément contract de l'espace de noms http://tempuri.org/ n'est pas marqué nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IVelibSoapService/GetStationsName", ReplyAction="*")]
+        VelibSoapServiceReference.GetStationsNameResponse GetStationsName(VelibSoapServiceReference.GetStationsNameRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IVelibSoapService/GetStationsName", ReplyAction="*")]
+        System.Threading.Tasks.Task<VelibSoapServiceReference.GetStationsNameResponse> GetStationsNameAsync(VelibSoapServiceReference.GetStationsNameRequest request);
+        
+        // CODEGEN : La génération du contrat de message depuis le nom d'élément contract de l'espace de noms http://tempuri.org/ n'est pas marqué nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IVelibSoapService/GetStationByName", ReplyAction="*")]
+        VelibSoapServiceReference.GetStationByNameResponse GetStationByName(VelibSoapServiceReference.GetStationByNameRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IVelibSoapService/GetStationByName", ReplyAction="*")]
+        System.Threading.Tasks.Task<VelibSoapServiceReference.GetStationByNameResponse> GetStationByNameAsync(VelibSoapServiceReference.GetStationByNameRequest request);
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetContractsRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetContracts", Namespace="http://tempuri.org/", Order=0)]
+        public VelibSoapServiceReference.GetContractsRequestBody Body;
+        
+        public GetContractsRequest() {
+        }
+        
+        public GetContractsRequest(VelibSoapServiceReference.GetContractsRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute()]
+    public partial class GetContractsRequestBody {
+        
+        public GetContractsRequestBody() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetContractsResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetContractsResponse", Namespace="http://tempuri.org/", Order=0)]
+        public VelibSoapServiceReference.GetContractsResponseBody Body;
+        
+        public GetContractsResponse() {
+        }
+        
+        public GetContractsResponse(VelibSoapServiceReference.GetContractsResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetContractsResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public VelibSoapServiceReference.VelibSoapContract[] GetContractsResult;
+        
+        public GetContractsResponseBody() {
+        }
+        
+        public GetContractsResponseBody(VelibSoapServiceReference.VelibSoapContract[] GetContractsResult) {
+            this.GetContractsResult = GetContractsResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetContractsNameRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetContractsName", Namespace="http://tempuri.org/", Order=0)]
+        public VelibSoapServiceReference.GetContractsNameRequestBody Body;
+        
+        public GetContractsNameRequest() {
+        }
+        
+        public GetContractsNameRequest(VelibSoapServiceReference.GetContractsNameRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute()]
+    public partial class GetContractsNameRequestBody {
+        
+        public GetContractsNameRequestBody() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetContractsNameResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetContractsNameResponse", Namespace="http://tempuri.org/", Order=0)]
+        public VelibSoapServiceReference.GetContractsNameResponseBody Body;
+        
+        public GetContractsNameResponse() {
+        }
+        
+        public GetContractsNameResponse(VelibSoapServiceReference.GetContractsNameResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetContractsNameResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public VelibSoapServiceReference.ArrayOfString GetContractsNameResult;
+        
+        public GetContractsNameResponseBody() {
+        }
+        
+        public GetContractsNameResponseBody(VelibSoapServiceReference.ArrayOfString GetContractsNameResult) {
+            this.GetContractsNameResult = GetContractsNameResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetContractByNameRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetContractByName", Namespace="http://tempuri.org/", Order=0)]
+        public VelibSoapServiceReference.GetContractByNameRequestBody Body;
+        
+        public GetContractByNameRequest() {
+        }
+        
+        public GetContractByNameRequest(VelibSoapServiceReference.GetContractByNameRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetContractByNameRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public string name;
+        
+        public GetContractByNameRequestBody() {
+        }
+        
+        public GetContractByNameRequestBody(string name) {
+            this.name = name;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetContractByNameResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetContractByNameResponse", Namespace="http://tempuri.org/", Order=0)]
+        public VelibSoapServiceReference.GetContractByNameResponseBody Body;
+        
+        public GetContractByNameResponse() {
+        }
+        
+        public GetContractByNameResponse(VelibSoapServiceReference.GetContractByNameResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetContractByNameResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public VelibSoapServiceReference.VelibSoapContract GetContractByNameResult;
+        
+        public GetContractByNameResponseBody() {
+        }
+        
+        public GetContractByNameResponseBody(VelibSoapServiceReference.VelibSoapContract GetContractByNameResult) {
+            this.GetContractByNameResult = GetContractByNameResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetStationsRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetStations", Namespace="http://tempuri.org/", Order=0)]
+        public VelibSoapServiceReference.GetStationsRequestBody Body;
+        
+        public GetStationsRequest() {
+        }
+        
+        public GetStationsRequest(VelibSoapServiceReference.GetStationsRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetStationsRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public VelibSoapServiceReference.VelibSoapContract contract;
+        
+        public GetStationsRequestBody() {
+        }
+        
+        public GetStationsRequestBody(VelibSoapServiceReference.VelibSoapContract contract) {
+            this.contract = contract;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetStationsResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetStationsResponse", Namespace="http://tempuri.org/", Order=0)]
+        public VelibSoapServiceReference.GetStationsResponseBody Body;
+        
+        public GetStationsResponse() {
+        }
+        
+        public GetStationsResponse(VelibSoapServiceReference.GetStationsResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetStationsResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public VelibSoapServiceReference.VelibSoapStation[] GetStationsResult;
+        
+        public GetStationsResponseBody() {
+        }
+        
+        public GetStationsResponseBody(VelibSoapServiceReference.VelibSoapStation[] GetStationsResult) {
+            this.GetStationsResult = GetStationsResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetStationsNameRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetStationsName", Namespace="http://tempuri.org/", Order=0)]
+        public VelibSoapServiceReference.GetStationsNameRequestBody Body;
+        
+        public GetStationsNameRequest() {
+        }
+        
+        public GetStationsNameRequest(VelibSoapServiceReference.GetStationsNameRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetStationsNameRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public VelibSoapServiceReference.VelibSoapContract contract;
+        
+        public GetStationsNameRequestBody() {
+        }
+        
+        public GetStationsNameRequestBody(VelibSoapServiceReference.VelibSoapContract contract) {
+            this.contract = contract;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetStationsNameResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetStationsNameResponse", Namespace="http://tempuri.org/", Order=0)]
+        public VelibSoapServiceReference.GetStationsNameResponseBody Body;
+        
+        public GetStationsNameResponse() {
+        }
+        
+        public GetStationsNameResponse(VelibSoapServiceReference.GetStationsNameResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetStationsNameResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public VelibSoapServiceReference.ArrayOfString GetStationsNameResult;
+        
+        public GetStationsNameResponseBody() {
+        }
+        
+        public GetStationsNameResponseBody(VelibSoapServiceReference.ArrayOfString GetStationsNameResult) {
+            this.GetStationsNameResult = GetStationsNameResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetStationByNameRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetStationByName", Namespace="http://tempuri.org/", Order=0)]
+        public VelibSoapServiceReference.GetStationByNameRequestBody Body;
+        
+        public GetStationByNameRequest() {
+        }
+        
+        public GetStationByNameRequest(VelibSoapServiceReference.GetStationByNameRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetStationByNameRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public VelibSoapServiceReference.VelibSoapContract contract;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
+        public string name;
+        
+        public GetStationByNameRequestBody() {
+        }
+        
+        public GetStationByNameRequestBody(VelibSoapServiceReference.VelibSoapContract contract, string name) {
+            this.contract = contract;
+            this.name = name;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetStationByNameResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetStationByNameResponse", Namespace="http://tempuri.org/", Order=0)]
+        public VelibSoapServiceReference.GetStationByNameResponseBody Body;
+        
+        public GetStationByNameResponse() {
+        }
+        
+        public GetStationByNameResponse(VelibSoapServiceReference.GetStationByNameResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetStationByNameResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public VelibSoapServiceReference.VelibSoapStation GetStationByNameResult;
+        
+        public GetStationByNameResponseBody() {
+        }
+        
+        public GetStationByNameResponseBody(VelibSoapServiceReference.VelibSoapStation GetStationByNameResult) {
+            this.GetStationByNameResult = GetStationByNameResult;
+        }
+    }
+    
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public interface IVelibSoapServiceChannel : VelibSoapServiceReference.IVelibSoapService, System.ServiceModel.IClientChannel {
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class VelibSoapServiceClient : System.ServiceModel.ClientBase<VelibSoapServiceReference.IVelibSoapService>, VelibSoapServiceReference.IVelibSoapService {
+        
+        public VelibSoapServiceClient() {
+        }
+        
+        public VelibSoapServiceClient(string endpointConfigurationName) : 
+                base(endpointConfigurationName) {
+        }
+        
+        public VelibSoapServiceClient(string endpointConfigurationName, string remoteAddress) : 
+                base(endpointConfigurationName, remoteAddress) {
+        }
+        
+        public VelibSoapServiceClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) : 
+                base(endpointConfigurationName, remoteAddress) {
+        }
+        
+        public VelibSoapServiceClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
+                base(binding, remoteAddress) {
+        }
+        
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        [System.ServiceModel.MessageContractAttribute(IsWrapped = false)]
-        public partial class GetContractsRequest
-        {
-
-            [System.ServiceModel.MessageBodyMemberAttribute(Name = "GetContracts", Namespace = "http://tempuri.org/", Order = 0)]
-            public VelibSoapServiceReference.GetContractsRequestBody Body;
-
-            public GetContractsRequest()
-            {
-            }
-
-            public GetContractsRequest(VelibSoapServiceReference.GetContractsRequestBody Body)
-            {
-                this.Body = Body;
-            }
+        VelibSoapServiceReference.GetContractsResponse VelibSoapServiceReference.IVelibSoapService.GetContracts(VelibSoapServiceReference.GetContractsRequest request) {
+            return base.Channel.GetContracts(request);
         }
-
-        [System.Diagnostics.DebuggerStepThroughAttribute()]
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+        
+        public VelibSoapServiceReference.VelibSoapContract[] GetContracts() {
+            VelibSoapServiceReference.GetContractsRequest inValue = new VelibSoapServiceReference.GetContractsRequest();
+            inValue.Body = new VelibSoapServiceReference.GetContractsRequestBody();
+            VelibSoapServiceReference.GetContractsResponse retVal = ((VelibSoapServiceReference.IVelibSoapService)(this)).GetContracts(inValue);
+            return retVal.Body.GetContractsResult;
+        }
+        
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        [System.Runtime.Serialization.DataContractAttribute()]
-        public partial class GetContractsRequestBody
-        {
-
-            public GetContractsRequestBody()
-            {
-            }
+        System.Threading.Tasks.Task<VelibSoapServiceReference.GetContractsResponse> VelibSoapServiceReference.IVelibSoapService.GetContractsAsync(VelibSoapServiceReference.GetContractsRequest request) {
+            return base.Channel.GetContractsAsync(request);
         }
-
-        [System.Diagnostics.DebuggerStepThroughAttribute()]
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+        
+        public System.Threading.Tasks.Task<VelibSoapServiceReference.GetContractsResponse> GetContractsAsync() {
+            VelibSoapServiceReference.GetContractsRequest inValue = new VelibSoapServiceReference.GetContractsRequest();
+            inValue.Body = new VelibSoapServiceReference.GetContractsRequestBody();
+            return ((VelibSoapServiceReference.IVelibSoapService)(this)).GetContractsAsync(inValue);
+        }
+        
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        [System.ServiceModel.MessageContractAttribute(IsWrapped = false)]
-        public partial class GetContractsResponse
-        {
-
-            [System.ServiceModel.MessageBodyMemberAttribute(Name = "GetContractsResponse", Namespace = "http://tempuri.org/", Order = 0)]
-            public VelibSoapServiceReference.GetContractsResponseBody Body;
-
-            public GetContractsResponse()
-            {
-            }
-
-            public GetContractsResponse(VelibSoapServiceReference.GetContractsResponseBody Body)
-            {
-                this.Body = Body;
-            }
+        VelibSoapServiceReference.GetContractsNameResponse VelibSoapServiceReference.IVelibSoapService.GetContractsName(VelibSoapServiceReference.GetContractsNameRequest request) {
+            return base.Channel.GetContractsName(request);
         }
-
-        [System.Diagnostics.DebuggerStepThroughAttribute()]
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+        
+        public VelibSoapServiceReference.ArrayOfString GetContractsName() {
+            VelibSoapServiceReference.GetContractsNameRequest inValue = new VelibSoapServiceReference.GetContractsNameRequest();
+            inValue.Body = new VelibSoapServiceReference.GetContractsNameRequestBody();
+            VelibSoapServiceReference.GetContractsNameResponse retVal = ((VelibSoapServiceReference.IVelibSoapService)(this)).GetContractsName(inValue);
+            return retVal.Body.GetContractsNameResult;
+        }
+        
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        [System.Runtime.Serialization.DataContractAttribute(Namespace = "http://tempuri.org/")]
-        public partial class GetContractsResponseBody
-        {
-
-            [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue = false, Order = 0)]
-            public VelibSoapServiceReference.VelibSoapContract[] GetContractsResult;
-
-            public GetContractsResponseBody()
-            {
-            }
-
-            public GetContractsResponseBody(VelibSoapServiceReference.VelibSoapContract[] GetContractsResult)
-            {
-                this.GetContractsResult = GetContractsResult;
-            }
+        System.Threading.Tasks.Task<VelibSoapServiceReference.GetContractsNameResponse> VelibSoapServiceReference.IVelibSoapService.GetContractsNameAsync(VelibSoapServiceReference.GetContractsNameRequest request) {
+            return base.Channel.GetContractsNameAsync(request);
         }
-
-        [System.Diagnostics.DebuggerStepThroughAttribute()]
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+        
+        public System.Threading.Tasks.Task<VelibSoapServiceReference.GetContractsNameResponse> GetContractsNameAsync() {
+            VelibSoapServiceReference.GetContractsNameRequest inValue = new VelibSoapServiceReference.GetContractsNameRequest();
+            inValue.Body = new VelibSoapServiceReference.GetContractsNameRequestBody();
+            return ((VelibSoapServiceReference.IVelibSoapService)(this)).GetContractsNameAsync(inValue);
+        }
+        
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        [System.ServiceModel.MessageContractAttribute(IsWrapped = false)]
-        public partial class GetStationsRequest
-        {
-
-            [System.ServiceModel.MessageBodyMemberAttribute(Name = "GetStations", Namespace = "http://tempuri.org/", Order = 0)]
-            public VelibSoapServiceReference.GetStationsRequestBody Body;
-
-            public GetStationsRequest()
-            {
-            }
-
-            public GetStationsRequest(VelibSoapServiceReference.GetStationsRequestBody Body)
-            {
-                this.Body = Body;
-            }
+        VelibSoapServiceReference.GetContractByNameResponse VelibSoapServiceReference.IVelibSoapService.GetContractByName(VelibSoapServiceReference.GetContractByNameRequest request) {
+            return base.Channel.GetContractByName(request);
         }
-
-        [System.Diagnostics.DebuggerStepThroughAttribute()]
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+        
+        public VelibSoapServiceReference.VelibSoapContract GetContractByName(string name) {
+            VelibSoapServiceReference.GetContractByNameRequest inValue = new VelibSoapServiceReference.GetContractByNameRequest();
+            inValue.Body = new VelibSoapServiceReference.GetContractByNameRequestBody();
+            inValue.Body.name = name;
+            VelibSoapServiceReference.GetContractByNameResponse retVal = ((VelibSoapServiceReference.IVelibSoapService)(this)).GetContractByName(inValue);
+            return retVal.Body.GetContractByNameResult;
+        }
+        
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        [System.Runtime.Serialization.DataContractAttribute(Namespace = "http://tempuri.org/")]
-        public partial class GetStationsRequestBody
-        {
-
-            [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue = false, Order = 0)]
-            public VelibSoapServiceReference.VelibSoapContract contract;
-
-            public GetStationsRequestBody()
-            {
-            }
-
-            public GetStationsRequestBody(VelibSoapServiceReference.VelibSoapContract contract)
-            {
-                this.contract = contract;
-            }
+        System.Threading.Tasks.Task<VelibSoapServiceReference.GetContractByNameResponse> VelibSoapServiceReference.IVelibSoapService.GetContractByNameAsync(VelibSoapServiceReference.GetContractByNameRequest request) {
+            return base.Channel.GetContractByNameAsync(request);
         }
-
-        [System.Diagnostics.DebuggerStepThroughAttribute()]
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+        
+        public System.Threading.Tasks.Task<VelibSoapServiceReference.GetContractByNameResponse> GetContractByNameAsync(string name) {
+            VelibSoapServiceReference.GetContractByNameRequest inValue = new VelibSoapServiceReference.GetContractByNameRequest();
+            inValue.Body = new VelibSoapServiceReference.GetContractByNameRequestBody();
+            inValue.Body.name = name;
+            return ((VelibSoapServiceReference.IVelibSoapService)(this)).GetContractByNameAsync(inValue);
+        }
+        
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        [System.ServiceModel.MessageContractAttribute(IsWrapped = false)]
-        public partial class GetStationsResponse
-        {
-
-            [System.ServiceModel.MessageBodyMemberAttribute(Name = "GetStationsResponse", Namespace = "http://tempuri.org/", Order = 0)]
-            public VelibSoapServiceReference.GetStationsResponseBody Body;
-
-            public GetStationsResponse()
-            {
-            }
-
-            public GetStationsResponse(VelibSoapServiceReference.GetStationsResponseBody Body)
-            {
-                this.Body = Body;
-            }
+        VelibSoapServiceReference.GetStationsResponse VelibSoapServiceReference.IVelibSoapService.GetStations(VelibSoapServiceReference.GetStationsRequest request) {
+            return base.Channel.GetStations(request);
         }
-
-        [System.Diagnostics.DebuggerStepThroughAttribute()]
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+        
+        public VelibSoapServiceReference.VelibSoapStation[] GetStations(VelibSoapServiceReference.VelibSoapContract contract) {
+            VelibSoapServiceReference.GetStationsRequest inValue = new VelibSoapServiceReference.GetStationsRequest();
+            inValue.Body = new VelibSoapServiceReference.GetStationsRequestBody();
+            inValue.Body.contract = contract;
+            VelibSoapServiceReference.GetStationsResponse retVal = ((VelibSoapServiceReference.IVelibSoapService)(this)).GetStations(inValue);
+            return retVal.Body.GetStationsResult;
+        }
+        
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        [System.Runtime.Serialization.DataContractAttribute(Namespace = "http://tempuri.org/")]
-        public partial class GetStationsResponseBody
-        {
-
-            [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue = false, Order = 0)]
-            public VelibSoapServiceReference.VelibSoapStation[] GetStationsResult;
-
-            public GetStationsResponseBody()
-            {
-            }
-
-            public GetStationsResponseBody(VelibSoapServiceReference.VelibSoapStation[] GetStationsResult)
-            {
-                this.GetStationsResult = GetStationsResult;
-            }
+        System.Threading.Tasks.Task<VelibSoapServiceReference.GetStationsResponse> VelibSoapServiceReference.IVelibSoapService.GetStationsAsync(VelibSoapServiceReference.GetStationsRequest request) {
+            return base.Channel.GetStationsAsync(request);
         }
-
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-        public interface IVelibSoapServiceChannel : VelibSoapServiceReference.IVelibSoapService, System.ServiceModel.IClientChannel
-        {
+        
+        public System.Threading.Tasks.Task<VelibSoapServiceReference.GetStationsResponse> GetStationsAsync(VelibSoapServiceReference.VelibSoapContract contract) {
+            VelibSoapServiceReference.GetStationsRequest inValue = new VelibSoapServiceReference.GetStationsRequest();
+            inValue.Body = new VelibSoapServiceReference.GetStationsRequestBody();
+            inValue.Body.contract = contract;
+            return ((VelibSoapServiceReference.IVelibSoapService)(this)).GetStationsAsync(inValue);
         }
-
-        [System.Diagnostics.DebuggerStepThroughAttribute()]
-        [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-        public partial class VelibSoapServiceClient : System.ServiceModel.ClientBase<VelibSoapServiceReference.IVelibSoapService>, VelibSoapServiceReference.IVelibSoapService
-        {
-
-            public VelibSoapServiceClient()
-            {
-            }
-
-            public VelibSoapServiceClient(string endpointConfigurationName) :
-                    base(endpointConfigurationName)
-            {
-            }
-
-            public VelibSoapServiceClient(string endpointConfigurationName, string remoteAddress) :
-                    base(endpointConfigurationName, remoteAddress)
-            {
-            }
-
-            public VelibSoapServiceClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) :
-                    base(endpointConfigurationName, remoteAddress)
-            {
-            }
-
-            public VelibSoapServiceClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) :
-                    base(binding, remoteAddress)
-            {
-            }
-
-            [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-            VelibSoapServiceReference.GetContractsResponse VelibSoapServiceReference.IVelibSoapService.GetContracts(VelibSoapServiceReference.GetContractsRequest request)
-            {
-                return base.Channel.GetContracts(request);
-            }
-
-            public VelibSoapServiceReference.VelibSoapContract[] GetContracts()
-            {
-                VelibSoapServiceReference.GetContractsRequest inValue = new VelibSoapServiceReference.GetContractsRequest();
-                inValue.Body = new VelibSoapServiceReference.GetContractsRequestBody();
-                VelibSoapServiceReference.GetContractsResponse retVal = ((VelibSoapServiceReference.IVelibSoapService)(this)).GetContracts(inValue);
-                return retVal.Body.GetContractsResult;
-            }
-
-            [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-            System.Threading.Tasks.Task<VelibSoapServiceReference.GetContractsResponse> VelibSoapServiceReference.IVelibSoapService.GetContractsAsync(VelibSoapServiceReference.GetContractsRequest request)
-            {
-                return base.Channel.GetContractsAsync(request);
-            }
-
-            public System.Threading.Tasks.Task<VelibSoapServiceReference.GetContractsResponse> GetContractsAsync()
-            {
-                VelibSoapServiceReference.GetContractsRequest inValue = new VelibSoapServiceReference.GetContractsRequest();
-                inValue.Body = new VelibSoapServiceReference.GetContractsRequestBody();
-                return ((VelibSoapServiceReference.IVelibSoapService)(this)).GetContractsAsync(inValue);
-            }
-
-            [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-            VelibSoapServiceReference.GetStationsResponse VelibSoapServiceReference.IVelibSoapService.GetStations(VelibSoapServiceReference.GetStationsRequest request)
-            {
-                return base.Channel.GetStations(request);
-            }
-
-            public VelibSoapServiceReference.VelibSoapStation[] GetStations(VelibSoapServiceReference.VelibSoapContract contract)
-            {
-                VelibSoapServiceReference.GetStationsRequest inValue = new VelibSoapServiceReference.GetStationsRequest();
-                inValue.Body = new VelibSoapServiceReference.GetStationsRequestBody();
-                inValue.Body.contract = contract;
-                VelibSoapServiceReference.GetStationsResponse retVal = ((VelibSoapServiceReference.IVelibSoapService)(this)).GetStations(inValue);
-                return retVal.Body.GetStationsResult;
-            }
-
-            [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-            System.Threading.Tasks.Task<VelibSoapServiceReference.GetStationsResponse> VelibSoapServiceReference.IVelibSoapService.GetStationsAsync(VelibSoapServiceReference.GetStationsRequest request)
-            {
-                return base.Channel.GetStationsAsync(request);
-            }
-
-            public System.Threading.Tasks.Task<VelibSoapServiceReference.GetStationsResponse> GetStationsAsync(VelibSoapServiceReference.VelibSoapContract contract)
-            {
-                VelibSoapServiceReference.GetStationsRequest inValue = new VelibSoapServiceReference.GetStationsRequest();
-                inValue.Body = new VelibSoapServiceReference.GetStationsRequestBody();
-                inValue.Body.contract = contract;
-                return ((VelibSoapServiceReference.IVelibSoapService)(this)).GetStationsAsync(inValue);
-            }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        VelibSoapServiceReference.GetStationsNameResponse VelibSoapServiceReference.IVelibSoapService.GetStationsName(VelibSoapServiceReference.GetStationsNameRequest request) {
+            return base.Channel.GetStationsName(request);
+        }
+        
+        public VelibSoapServiceReference.ArrayOfString GetStationsName(VelibSoapServiceReference.VelibSoapContract contract) {
+            VelibSoapServiceReference.GetStationsNameRequest inValue = new VelibSoapServiceReference.GetStationsNameRequest();
+            inValue.Body = new VelibSoapServiceReference.GetStationsNameRequestBody();
+            inValue.Body.contract = contract;
+            VelibSoapServiceReference.GetStationsNameResponse retVal = ((VelibSoapServiceReference.IVelibSoapService)(this)).GetStationsName(inValue);
+            return retVal.Body.GetStationsNameResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<VelibSoapServiceReference.GetStationsNameResponse> VelibSoapServiceReference.IVelibSoapService.GetStationsNameAsync(VelibSoapServiceReference.GetStationsNameRequest request) {
+            return base.Channel.GetStationsNameAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<VelibSoapServiceReference.GetStationsNameResponse> GetStationsNameAsync(VelibSoapServiceReference.VelibSoapContract contract) {
+            VelibSoapServiceReference.GetStationsNameRequest inValue = new VelibSoapServiceReference.GetStationsNameRequest();
+            inValue.Body = new VelibSoapServiceReference.GetStationsNameRequestBody();
+            inValue.Body.contract = contract;
+            return ((VelibSoapServiceReference.IVelibSoapService)(this)).GetStationsNameAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        VelibSoapServiceReference.GetStationByNameResponse VelibSoapServiceReference.IVelibSoapService.GetStationByName(VelibSoapServiceReference.GetStationByNameRequest request) {
+            return base.Channel.GetStationByName(request);
+        }
+        
+        public VelibSoapServiceReference.VelibSoapStation GetStationByName(VelibSoapServiceReference.VelibSoapContract contract, string name) {
+            VelibSoapServiceReference.GetStationByNameRequest inValue = new VelibSoapServiceReference.GetStationByNameRequest();
+            inValue.Body = new VelibSoapServiceReference.GetStationByNameRequestBody();
+            inValue.Body.contract = contract;
+            inValue.Body.name = name;
+            VelibSoapServiceReference.GetStationByNameResponse retVal = ((VelibSoapServiceReference.IVelibSoapService)(this)).GetStationByName(inValue);
+            return retVal.Body.GetStationByNameResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<VelibSoapServiceReference.GetStationByNameResponse> VelibSoapServiceReference.IVelibSoapService.GetStationByNameAsync(VelibSoapServiceReference.GetStationByNameRequest request) {
+            return base.Channel.GetStationByNameAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<VelibSoapServiceReference.GetStationByNameResponse> GetStationByNameAsync(VelibSoapServiceReference.VelibSoapContract contract, string name) {
+            VelibSoapServiceReference.GetStationByNameRequest inValue = new VelibSoapServiceReference.GetStationByNameRequest();
+            inValue.Body = new VelibSoapServiceReference.GetStationByNameRequestBody();
+            inValue.Body.contract = contract;
+            inValue.Body.name = name;
+            return ((VelibSoapServiceReference.IVelibSoapService)(this)).GetStationByNameAsync(inValue);
         }
     }
 }
