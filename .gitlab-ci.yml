@@ -21,4 +21,5 @@ build:
   stage: build
   script:
     - set -e
-    - kompose up -v
+#    - kompose up -v
+    - docker-compose build
