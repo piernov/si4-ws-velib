@@ -13,7 +13,15 @@ namespace VelibSoapClientConsole
 
         string Help()
         {
-            return "Miaou!";
+            return @"Available commands:
+    help                                        — display this message
+    quit                                        — close the application
+    connect [url]                               — connect to the webservice with an optional url
+    list contracts                              — list contract names
+    list stations <contract name>               — list station names for a given contract
+    get contract <contract name>                — get details about a contract
+    get station <contract name> <station name>  — get details about a station of a contract
+Note: name containing whitespaces should be enclosed with """".";
         }
 
         string Connect(string[] args)
