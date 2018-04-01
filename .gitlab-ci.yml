@@ -1,21 +1,21 @@
-image:
+#image:
 #  name: docker:latest
-  name: femtopixel/kompose:latest
-  entrypoint: [""]
+#  name: femtopixel/kompose:latest
+#  entrypoint: [""]
 
-services:
-  - docker:dind
+#services:
+#  - docker:dind
 
-variables:
-  DOCKER_HOST: "tcp://docker:2375"
+#variables:
+#  DOCKER_HOST: "tcp://docker:2375"
 
 before_script:
-  - apk update
-  - apk add docker
-  - echo $CI_JOB_TOKEN|base64>tmp
-  - cat tmp
+#  - apk update
+#  - apk add docker
+#  - echo $CI_JOB_TOKEN|base64>tmp
+#  - cat tmp
+  - docker login -u piernov -p LgoKqeasKaHsRP63CGvg gitlab.miaounyan.eu:5005
   - docker info
-  - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN gitlab.miaounyan.eu:5005
 
 build:
   stage: build
