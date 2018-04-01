@@ -17,9 +17,13 @@ namespace VelibSoapClientWinForms
 
         public VelibSoapClientWinForms()
         {
-            client = new VelibSoapServiceClient();
-
             InitializeComponent();
+        }
+
+        private void Connect(string url)
+        {
+            client = new VelibSoapServiceClient("BasicHttpBinding_IVelibSoapService", url);
+            textBox1.Text = client.Endpoint.Address.ToString();
             LoadContracts();
         }
 
@@ -56,6 +60,11 @@ namespace VelibSoapClientWinForms
 
             listStations.DataSource = client.GetStations(contract);
             listStations.DisplayMember = "Name";
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Connect(textBox1.Text);
         }
     }
 }
