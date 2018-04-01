@@ -206,8 +206,20 @@ namespace ServiceReference1
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IVelibSoapService/GetContracts", ReplyAction="*")]
         System.Threading.Tasks.Task<ServiceReference1.GetContractsResponse> GetContractsAsync(ServiceReference1.GetContractsRequest request);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IVelibSoapService/GetContractsName", ReplyAction="*")]
+        System.Threading.Tasks.Task<ServiceReference1.GetContractsNameResponse> GetContractsNameAsync(ServiceReference1.GetContractsNameRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IVelibSoapService/GetContractByName", ReplyAction="*")]
+        System.Threading.Tasks.Task<ServiceReference1.GetContractByNameResponse> GetContractByNameAsync(ServiceReference1.GetContractByNameRequest request);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IVelibSoapService/GetStations", ReplyAction="*")]
         System.Threading.Tasks.Task<ServiceReference1.GetStationsResponse> GetStationsAsync(ServiceReference1.GetStationsRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IVelibSoapService/GetStationsName", ReplyAction="*")]
+        System.Threading.Tasks.Task<ServiceReference1.GetStationsNameResponse> GetStationsNameAsync(ServiceReference1.GetStationsNameRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IVelibSoapService/GetStationByName", ReplyAction="*")]
+        System.Threading.Tasks.Task<ServiceReference1.GetStationByNameResponse> GetStationByNameAsync(ServiceReference1.GetStationByNameRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -279,6 +291,158 @@ namespace ServiceReference1
         public GetContractsResponseBody(ServiceReference1.VelibSoapContract[] GetContractsResult)
         {
             this.GetContractsResult = GetContractsResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetContractsNameRequest
+    {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetContractsName", Namespace="http://tempuri.org/", Order=0)]
+        public ServiceReference1.GetContractsNameRequestBody Body;
+        
+        public GetContractsNameRequest()
+        {
+        }
+        
+        public GetContractsNameRequest(ServiceReference1.GetContractsNameRequestBody Body)
+        {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute()]
+    public partial class GetContractsNameRequestBody
+    {
+        
+        public GetContractsNameRequestBody()
+        {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetContractsNameResponse
+    {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetContractsNameResponse", Namespace="http://tempuri.org/", Order=0)]
+        public ServiceReference1.GetContractsNameResponseBody Body;
+        
+        public GetContractsNameResponse()
+        {
+        }
+        
+        public GetContractsNameResponse(ServiceReference1.GetContractsNameResponseBody Body)
+        {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetContractsNameResponseBody
+    {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public ServiceReference1.ArrayOfString GetContractsNameResult;
+        
+        public GetContractsNameResponseBody()
+        {
+        }
+        
+        public GetContractsNameResponseBody(ServiceReference1.ArrayOfString GetContractsNameResult)
+        {
+            this.GetContractsNameResult = GetContractsNameResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetContractByNameRequest
+    {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetContractByName", Namespace="http://tempuri.org/", Order=0)]
+        public ServiceReference1.GetContractByNameRequestBody Body;
+        
+        public GetContractByNameRequest()
+        {
+        }
+        
+        public GetContractByNameRequest(ServiceReference1.GetContractByNameRequestBody Body)
+        {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetContractByNameRequestBody
+    {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public string name;
+        
+        public GetContractByNameRequestBody()
+        {
+        }
+        
+        public GetContractByNameRequestBody(string name)
+        {
+            this.name = name;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetContractByNameResponse
+    {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetContractByNameResponse", Namespace="http://tempuri.org/", Order=0)]
+        public ServiceReference1.GetContractByNameResponseBody Body;
+        
+        public GetContractByNameResponse()
+        {
+        }
+        
+        public GetContractByNameResponse(ServiceReference1.GetContractByNameResponseBody Body)
+        {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetContractByNameResponseBody
+    {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public ServiceReference1.VelibSoapContract GetContractByNameResult;
+        
+        public GetContractByNameResponseBody()
+        {
+        }
+        
+        public GetContractByNameResponseBody(ServiceReference1.VelibSoapContract GetContractByNameResult)
+        {
+            this.GetContractByNameResult = GetContractByNameResult;
         }
     }
     
@@ -362,6 +526,170 @@ namespace ServiceReference1
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetStationsNameRequest
+    {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetStationsName", Namespace="http://tempuri.org/", Order=0)]
+        public ServiceReference1.GetStationsNameRequestBody Body;
+        
+        public GetStationsNameRequest()
+        {
+        }
+        
+        public GetStationsNameRequest(ServiceReference1.GetStationsNameRequestBody Body)
+        {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetStationsNameRequestBody
+    {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public ServiceReference1.VelibSoapContract contract;
+        
+        public GetStationsNameRequestBody()
+        {
+        }
+        
+        public GetStationsNameRequestBody(ServiceReference1.VelibSoapContract contract)
+        {
+            this.contract = contract;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetStationsNameResponse
+    {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetStationsNameResponse", Namespace="http://tempuri.org/", Order=0)]
+        public ServiceReference1.GetStationsNameResponseBody Body;
+        
+        public GetStationsNameResponse()
+        {
+        }
+        
+        public GetStationsNameResponse(ServiceReference1.GetStationsNameResponseBody Body)
+        {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetStationsNameResponseBody
+    {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public ServiceReference1.ArrayOfString GetStationsNameResult;
+        
+        public GetStationsNameResponseBody()
+        {
+        }
+        
+        public GetStationsNameResponseBody(ServiceReference1.ArrayOfString GetStationsNameResult)
+        {
+            this.GetStationsNameResult = GetStationsNameResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetStationByNameRequest
+    {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetStationByName", Namespace="http://tempuri.org/", Order=0)]
+        public ServiceReference1.GetStationByNameRequestBody Body;
+        
+        public GetStationByNameRequest()
+        {
+        }
+        
+        public GetStationByNameRequest(ServiceReference1.GetStationByNameRequestBody Body)
+        {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetStationByNameRequestBody
+    {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public ServiceReference1.VelibSoapContract contract;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
+        public string name;
+        
+        public GetStationByNameRequestBody()
+        {
+        }
+        
+        public GetStationByNameRequestBody(ServiceReference1.VelibSoapContract contract, string name)
+        {
+            this.contract = contract;
+            this.name = name;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class GetStationByNameResponse
+    {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="GetStationByNameResponse", Namespace="http://tempuri.org/", Order=0)]
+        public ServiceReference1.GetStationByNameResponseBody Body;
+        
+        public GetStationByNameResponse()
+        {
+        }
+        
+        public GetStationByNameResponse(ServiceReference1.GetStationByNameResponseBody Body)
+        {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class GetStationByNameResponseBody
+    {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public ServiceReference1.VelibSoapStation GetStationByNameResult;
+        
+        public GetStationByNameResponseBody()
+        {
+        }
+        
+        public GetStationByNameResponseBody(ServiceReference1.VelibSoapStation GetStationByNameResult)
+        {
+            this.GetStationByNameResult = GetStationByNameResult;
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("dotnet-svcutil", "1.0.0.0")]
     public interface IVelibSoapServiceChannel : ServiceReference1.IVelibSoapService, System.ServiceModel.IClientChannel
     {
@@ -426,6 +754,33 @@ namespace ServiceReference1
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<ServiceReference1.GetContractsNameResponse> ServiceReference1.IVelibSoapService.GetContractsNameAsync(ServiceReference1.GetContractsNameRequest request)
+        {
+            return base.Channel.GetContractsNameAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<ServiceReference1.GetContractsNameResponse> GetContractsNameAsync()
+        {
+            ServiceReference1.GetContractsNameRequest inValue = new ServiceReference1.GetContractsNameRequest();
+            inValue.Body = new ServiceReference1.GetContractsNameRequestBody();
+            return ((ServiceReference1.IVelibSoapService)(this)).GetContractsNameAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<ServiceReference1.GetContractByNameResponse> ServiceReference1.IVelibSoapService.GetContractByNameAsync(ServiceReference1.GetContractByNameRequest request)
+        {
+            return base.Channel.GetContractByNameAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<ServiceReference1.GetContractByNameResponse> GetContractByNameAsync(string name)
+        {
+            ServiceReference1.GetContractByNameRequest inValue = new ServiceReference1.GetContractByNameRequest();
+            inValue.Body = new ServiceReference1.GetContractByNameRequestBody();
+            inValue.Body.name = name;
+            return ((ServiceReference1.IVelibSoapService)(this)).GetContractByNameAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         System.Threading.Tasks.Task<ServiceReference1.GetStationsResponse> ServiceReference1.IVelibSoapService.GetStationsAsync(ServiceReference1.GetStationsRequest request)
         {
             return base.Channel.GetStationsAsync(request);
@@ -437,6 +792,35 @@ namespace ServiceReference1
             inValue.Body = new ServiceReference1.GetStationsRequestBody();
             inValue.Body.contract = contract;
             return ((ServiceReference1.IVelibSoapService)(this)).GetStationsAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<ServiceReference1.GetStationsNameResponse> ServiceReference1.IVelibSoapService.GetStationsNameAsync(ServiceReference1.GetStationsNameRequest request)
+        {
+            return base.Channel.GetStationsNameAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<ServiceReference1.GetStationsNameResponse> GetStationsNameAsync(ServiceReference1.VelibSoapContract contract)
+        {
+            ServiceReference1.GetStationsNameRequest inValue = new ServiceReference1.GetStationsNameRequest();
+            inValue.Body = new ServiceReference1.GetStationsNameRequestBody();
+            inValue.Body.contract = contract;
+            return ((ServiceReference1.IVelibSoapService)(this)).GetStationsNameAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<ServiceReference1.GetStationByNameResponse> ServiceReference1.IVelibSoapService.GetStationByNameAsync(ServiceReference1.GetStationByNameRequest request)
+        {
+            return base.Channel.GetStationByNameAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<ServiceReference1.GetStationByNameResponse> GetStationByNameAsync(ServiceReference1.VelibSoapContract contract, string name)
+        {
+            ServiceReference1.GetStationByNameRequest inValue = new ServiceReference1.GetStationByNameRequest();
+            inValue.Body = new ServiceReference1.GetStationByNameRequestBody();
+            inValue.Body.contract = contract;
+            inValue.Body.name = name;
+            return ((ServiceReference1.IVelibSoapService)(this)).GetStationByNameAsync(inValue);
         }
         
         public virtual System.Threading.Tasks.Task OpenAsync()

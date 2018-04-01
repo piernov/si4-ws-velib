@@ -11,7 +11,19 @@ namespace VelibSoapServiceLibrary
         VelibSoapContract[] GetContracts();
 
         [OperationContract]
+        string[] GetContractsName();
+
+        [OperationContract]
+        VelibSoapContract GetContractByName(string name);
+
+        [OperationContract]
         VelibSoapStation[] GetStations(VelibSoapContract contract);
+
+        [OperationContract]
+        string[] GetStationsName(VelibSoapContract contract);
+
+        [OperationContract]
+        VelibSoapStation GetStationByName(VelibSoapContract contract, string name);
     }
 
     [DataContract]

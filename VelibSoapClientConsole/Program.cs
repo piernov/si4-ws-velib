@@ -7,8 +7,7 @@ namespace VelibSoapClientConsole
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
-            (new VelibSoapClientConsole()).run();
-            Console.ReadLine();
+            (new Prompt()).Run().Wait();
         }
     }
 }
