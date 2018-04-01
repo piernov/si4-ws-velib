@@ -1,6 +1,6 @@
 # Velib Gateway Web Service
 
-[https://gitlab.miaounyan.eu/piernov/si4-ws-velib] [![pipeline status](https://gitlab.miaounyan.eu/piernov/si4-ws-velib/badges/master/pipeline.svg)](https://gitlab.miaounyan.eu/piernov/si4-ws-velib/commits/master)
+[https://gitlab.miaounyan.eu/piernov/si4-ws-velib]
 
 ## Extensions
 
@@ -57,7 +57,7 @@ Build upon a .NET Core console application, it can be deployed into Linux Docker
 It is also dockerized and can be run using the provided `docker-compose.yml`:
 
 ```
-docker-compose up velibsoapclientconsole
+docker-compose run velibsoapclientconsole
 ```
 
 You may also run it using Visual Studio.
