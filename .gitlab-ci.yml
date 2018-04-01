@@ -1,0 +1,24 @@
+#image:
+#  name: docker:latest
+#  name: femtopixel/kompose:latest
+#  entrypoint: [""]
+
+#services:
+#  - docker:dind
+
+#variables:
+#  DOCKER_HOST: "tcp://docker:2375"
+
+before_script:
+#  - apk update
+#  - apk add docker
+#  - echo $CI_JOB_TOKEN|base64>tmp
+#  - cat tmp
+  - docker login -u piernov -p LgoKqeasKaHsRP63CGvg gitlab.miaounyan.eu:5005
+  - docker info
+
+build:
+  stage: build
+  script:
+    - set -e
+    - kompose up -v

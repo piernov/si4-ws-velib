@@ -2,7 +2,7 @@ version: '3'
 
 services:
   velibsoapwebapplication:
-    image: velibsoapwebapplication
+    image: gitlab.miaounyan.eu:5005/piernov/si4-ws-event/velibsoapwebapplication
     ports:
       - "5050:5050"
     build:
