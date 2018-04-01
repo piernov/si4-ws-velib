@@ -8,3 +8,10 @@ services:
     build:
       context: .
       dockerfile: VelibSoapWebApplication/Dockerfile
+
+  velibsoapclientconsole:
+    image: velibsoapclientconsole
+    build:
+      context: .
+      dockerfile: VelibSoapClientConsole/Dockerfile
+
