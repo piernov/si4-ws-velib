@@ -14,7 +14,8 @@ before_script:
 #  - apk add docker
 #  - echo $CI_JOB_TOKEN|base64>tmp
 #  - cat tmp
-  - docker login -u piernov -p LgoKqeasKaHsRP63CGvg gitlab.miaounyan.eu:5005
+#  - docker login -u piernov -p LgoKqeasKaHsRP63CGvg gitlab.miaounyan.eu:5005
+  - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN gitlab.miaounyan.eu:5005
   - docker info
 
 build:
@@ -22,4 +23,5 @@ build:
   script:
     - set -e
 #    - kompose up -v
-    - docker-compose build
+    - docker-compose build velibsoapwebapplication
+    - docker-compose push velibsoapwebapplication

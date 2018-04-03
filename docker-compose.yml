@@ -2,7 +2,7 @@ version: '3'
 
 services:
   velibsoapwebapplication:
-    image: gitlab.miaounyan.eu:5005/piernov/si4-ws-event/velibsoapwebapplication
+    image: gitlab.miaounyan.eu:5005/piernov/si4-ws-event
     ports:
       - "5050:5050"
     build:
@@ -14,4 +14,4 @@ services:
     build:
       context: .
       dockerfile: VelibSoapClientConsole/Dockerfile
-
+    tty: true
