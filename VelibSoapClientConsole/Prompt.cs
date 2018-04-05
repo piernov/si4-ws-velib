@@ -19,7 +19,7 @@ namespace VelibSoapClientConsole
             return @"Available commands:
     help                                                       — display this message
     quit                                                       — close the application
-    connect [url]                                              — connect to the webservice with an optional url
+    connect                                                    — connect to the webservice
     list contracts                                             — list contract names
     list stations <contract name>                              — list station names for a given contract
     get contract <contract name>                               — get details about a contract
@@ -34,11 +34,7 @@ Note: name containing whitespaces should be enclosed with """".";
             VelibSoapServiceCallbackSink objsink = new VelibSoapServiceCallbackSink();
             InstanceContext iCntxt = new InstanceContext(objsink);
 
-            if (args.Length > 0)
-                client = new VelibSoapServiceClient(iCntxt, "", args[0]);
-                //client = new VelibSoapServiceClient(VelibSoapServiceClient.EndpointConfiguration.BasicHttpBinding_IVelibSoapService, args[0], iCntxt);
-            else
-                client = new VelibSoapServiceClient(iCntxt);
+            client = new VelibSoapServiceClient(iCntxt);
             return "Connected to: " + client.Endpoint.Address;
         }
 
@@ -129,9 +125,6 @@ Note: name containing whitespaces should be enclosed with """".";
             if (args.Length < 2) return false;
             switch (args[0])
             {
-                case "contract":
-                    /*return args.Length == 2;*/
-                    return false;
                 case "station":
                     return args.Length == 4;
                 default:

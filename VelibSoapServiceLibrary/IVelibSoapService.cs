@@ -29,7 +29,7 @@ namespace VelibSoapServiceLibrary
 
         // Events subscription
         [OperationContract]
-        /*Timer*/ void SubscribeAvailableVelibUpdatedEvent(VelibSoapContract contract, string name, int period);
+        void SubscribeAvailableVelibUpdatedEvent(VelibSoapContract contract, string name, int period);
 
     }
 

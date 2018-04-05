@@ -115,10 +115,10 @@ namespace VelibSoapServiceLibrary
                 availableBikesByStation[name] = station.AvailableBikes;
                 availableVelibUpdatedEvent(station, station.AvailableBikes);
             }
-            availableVelibUpdatedEvent(station, station.AvailableBikes); //Debug: trigger event even if no change
+            //availableVelibUpdatedEvent(station, station.AvailableBikes); //Debug: trigger event even if no change
         }
 
-        public /*Timer*/ void SubscribeAvailableVelibUpdatedEvent(VelibSoapContract contract, string name, int period)
+        public void SubscribeAvailableVelibUpdatedEvent(VelibSoapContract contract, string name, int period)
         {
             IVelibSoapServiceEvents subscriber = OperationContext.Current.GetCallbackChannel<IVelibSoapServiceEvents>();
             Action<VelibSoapStation, int> availableVelibUpdatedEvent = delegate { };
@@ -134,7 +134,6 @@ namespace VelibSoapServiceLibrary
                 TimeSpan.FromSeconds(period));
 
             timers.Add(timer);
-            //return timer;
         }
     }
 }
