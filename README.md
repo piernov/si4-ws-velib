@@ -6,6 +6,9 @@
 
  * Development: Graphical User Interface for the client
  * Deployment
+ * Event-based
+
+Note: Deployment and Docker and Event-based service are not compatible
 
 ## Content
 
@@ -19,48 +22,32 @@ This is the actual gateway web service. Makes use of `JCDecauxAPILibrary` and im
 
 ### VelibSoapWebApplication
 
-This is the docker host for the `VelibSoapServiceLibrary` service.
-
-
-#### Build & run
-
-Built upon an ASP.NET Core project, it can be deployed into Linux Docker containers using the provided `docker-compose.yml` on both Linux and Windows.
-
-```
-docker-compose up velibsoapwebapplication
-```
+This is the docker host for the `VelibSoapServiceLibrary` service. Doesn't work with the event-based service, .NET Framework is needed.
 
 ### VelibSoapClientConsole
 
-A console client for the `VelibSoapWebApplication` web service. Provides a CLI prompt with the following commands:
+A .NET Framework Console client for the `VelibSoapWebApplication` web service. Provides a CLI prompt with the following commands:
 
 ```
 Available commands:
-    help                                        — display this message
-    quit                                        — close the application
-    connect [url]                               — connect to the webservice with an optional url
-    list contracts                              — list contract names
-    list stations <contract name>               — list station names for a given contract
-    get contract <contract name>                — get details about a contract
-    get station <contract name> <station name>  — get details about a station of a contract
+    help                                                       - display this message
+    quit                                                       - close the application
+    connect                                                    - connect to the webservice
+    list contracts                                             - list contract names
+    list stations <contract name>                              - list station names for a given contract
+    get contract <contract name>                               - get details about a contract
+    get station <contract name> <station name>                 - get details about a station of a contract
+    subscribe station <contract name> <station name> <period>  - subscribe to available bike changes
 Note: name containing whitespaces should be enclosed with "".
 ```
 
 You must first connect to a web service using the connect command with a valid URL.
 
-You can use `http://servers.piernov.org:5050/VelibSoapService.svc` as a remote web service, or `http://localhost:5050/VelibSoapService.svc` after a local Docker deployment of `VelibSoapWebApplication`.
+You can use `http://localhost:5050/VelibSoapService.svc` after starting VelibSoapServiceHost.
 
 #### Build & run
 
-Build upon a .NET Core console application, it can be deployed into Linux Docker container using the provided `docker-compose.yml` on both Linux and Windows.
-
-It is also dockerized and can be run using the provided `docker-compose.yml`:
-
-```
-docker-compose run velibsoapclientconsole
-```
-
-You may also run it using Visual Studio.
+You may run it using Visual Studio.
 
 ### VelibSoapClientWinForms
 
@@ -68,26 +55,18 @@ A GUI client for the `VelibSoapWebApplication` web service. Lists the contracts 
 
 #### Build & run
 
-This is a WinForms application, it is only compatible with the full .NET Framework on Windows
-
-Build and run using Visual Studio.
-
-You must first connect to a web service using the Connect button after typing in the URL.
-
-You can use `http://servers.piernov.org:5050/VelibSoapService.svc` as a remote web service, or `http://localhost:5050/VelibSoapService.svc` after a local Docker deployment of `VelibSoapWebApplication`.
+This is a WinForms application, it is only compatible with the full .NET Framework on Windows. Doesn't work with the event-based service.
 
 ### VelibSoapService
 
-This is a WCF Application hosting `VelibSoapServiceLibrary` inside IIS. 
+This is a WCF Application hosting `VelibSoapServiceLibrary` inside IIS. Doesn't work with the event-based service.
 
-The actual WSDL may differ from `VelibSoapWebApplication`, thus the client apps may need some adjustements to be compatible with this service.
+Use `VelibSoapServiceHost` instead.
 
-Use `VelibSoapWebApplication` instead.
+### VelibSoapServiceHost
+
+This is a .NET Framework Console application hosting `VelibSoapServiceLibrary`. Works with the event-based service.
 
 #### Build & run
 
-This is a WCF Service, it is only compatible with the full .NET Framework on Windows.
-
-Build and run using Visual Studio.
-
-The service will be available at `http://localhost:51460/VelibSoapService.svc`.
+You may run it using Visual Studio.
