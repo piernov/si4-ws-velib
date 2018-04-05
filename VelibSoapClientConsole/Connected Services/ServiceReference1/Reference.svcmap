@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="ea167fb9-4261-451c-91fb-193d1c4acd75" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>false</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:5050/VelibSoapService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="VelibSoapService.xsd" MetadataType="Schema" ID="4dfc7a50-1579-4108-93d8-e78d6a84464a" SourceId="1" SourceUrl="http://localhost:5050/VelibSoapService.svc?xsd=xsd5" />
+    <MetadataFile FileName="VelibSoapService1.xsd" MetadataType="Schema" ID="ed417e33-607f-4f55-9aa8-993c33ff136e" SourceId="1" SourceUrl="http://localhost:5050/VelibSoapService.svc?xsd=xsd3" />
+    <MetadataFile FileName="VelibSoapService2.xsd" MetadataType="Schema" ID="e47478a2-9a31-49f3-b61f-fd42365e4399" SourceId="1" SourceUrl="http://localhost:5050/VelibSoapService.svc?xsd=xsd6" />
+    <MetadataFile FileName="VelibSoapService3.xsd" MetadataType="Schema" ID="1b8a18bf-4389-4c81-b632-4191c5c53ceb" SourceId="1" SourceUrl="http://localhost:5050/VelibSoapService.svc?xsd=xsd0" />
+    <MetadataFile FileName="VelibSoapService.disco" MetadataType="Disco" ID="4df3b442-e0ef-44e1-9f1f-3e13b67c5443" SourceId="1" SourceUrl="http://localhost:5050/VelibSoapService.svc?disco" />
+    <MetadataFile FileName="VelibSoapService4.xsd" MetadataType="Schema" ID="ec5c09fb-d841-47ea-b072-9f616e817ad1" SourceId="1" SourceUrl="http://localhost:5050/VelibSoapService.svc?xsd=xsd2" />
+    <MetadataFile FileName="VelibSoapService5.xsd" MetadataType="Schema" ID="0c0c4f03-e11c-42a5-9cc2-fd0e02df9b4d" SourceId="1" SourceUrl="http://localhost:5050/VelibSoapService.svc?xsd=xsd1" />
+    <MetadataFile FileName="VelibSoapService.wsdl" MetadataType="Wsdl" ID="a746af8e-7580-4fe2-af47-6bf7c14b2d61" SourceId="1" SourceUrl="http://localhost:5050/VelibSoapService.svc?wsdl" />
+    <MetadataFile FileName="VelibSoapService6.xsd" MetadataType="Schema" ID="41646e66-1cca-48d0-9d03-b80d761b1b98" SourceId="1" SourceUrl="http://localhost:5050/VelibSoapService.svc?xsd=xsd4" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

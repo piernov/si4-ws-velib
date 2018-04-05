@@ -5,8 +5,6 @@ VisualStudioVersion = 15.0.27428.2002
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VelibSoapService", "VelibSoap\VelibSoapService.csproj", "{38EE54D3-0896-439E-8319-549CCE7CC920}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VelibSoapClientConsole", "VelibSoapClientConsole\VelibSoapClientConsole.csproj", "{A40694D0-81EB-4448-BEC4-80E86F882C8C}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VelibSoapWebApplication", "VelibSoapWebApplication\VelibSoapWebApplication.csproj", "{91DC3F3C-404A-4FAE-8189-283F59BF3D9F}"
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{59EBB832-DDCE-41ED-8BB4-3D048C6B3737}"
@@ -16,6 +14,10 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VelibSoapServiceLibrary", "VelibSoapServiceLibrary\VelibSoapServiceLibrary.csproj", "{233B6FAD-4892-42E3-90C3-82631B1672D5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VelibSoapClientWinForms", "VelibSoapClientWinForms\VelibSoapClientWinForms.csproj", "{945BE5D9-66F3-41E3-9698-1B2A0607A637}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VelibSoapServiceHost", "VelibSoapServiceHost\VelibSoapServiceHost.csproj", "{4587FF62-39DD-437A-BE3C-C16B918D5287}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VelibSoapClientConsole", "VelibSoapClientConsole\VelibSoapClientConsole.csproj", "{D0D23B71-54FB-4F16-B49C-1E06E87B4083}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,10 +29,6 @@ Global
 		{38EE54D3-0896-439E-8319-549CCE7CC920}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{38EE54D3-0896-439E-8319-549CCE7CC920}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{38EE54D3-0896-439E-8319-549CCE7CC920}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A40694D0-81EB-4448-BEC4-80E86F882C8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A40694D0-81EB-4448-BEC4-80E86F882C8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A40694D0-81EB-4448-BEC4-80E86F882C8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A40694D0-81EB-4448-BEC4-80E86F882C8C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{91DC3F3C-404A-4FAE-8189-283F59BF3D9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{91DC3F3C-404A-4FAE-8189-283F59BF3D9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{91DC3F3C-404A-4FAE-8189-283F59BF3D9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -51,6 +49,14 @@ Global
 		{945BE5D9-66F3-41E3-9698-1B2A0607A637}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{945BE5D9-66F3-41E3-9698-1B2A0607A637}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{945BE5D9-66F3-41E3-9698-1B2A0607A637}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4587FF62-39DD-437A-BE3C-C16B918D5287}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4587FF62-39DD-437A-BE3C-C16B918D5287}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4587FF62-39DD-437A-BE3C-C16B918D5287}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4587FF62-39DD-437A-BE3C-C16B918D5287}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0D23B71-54FB-4F16-B49C-1E06E87B4083}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0D23B71-54FB-4F16-B49C-1E06E87B4083}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0D23B71-54FB-4F16-B49C-1E06E87B4083}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0D23B71-54FB-4F16-B49C-1E06E87B4083}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

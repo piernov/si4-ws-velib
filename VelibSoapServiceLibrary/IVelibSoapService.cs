@@ -1,10 +1,11 @@
 ﻿using System.Collections.Generic;
 using System.Runtime.Serialization;
 using System.ServiceModel;
+using System.Threading;
 
 namespace VelibSoapServiceLibrary
 {
-    [ServiceContract]
+    [ServiceContract(CallbackContract = typeof(IVelibSoapServiceEvents))]
     public interface IVelibSoapService
     {
         [OperationContract]
@@ -24,6 +25,12 @@ namespace VelibSoapServiceLibrary
 
         [OperationContract]
         VelibSoapStation GetStationByName(VelibSoapContract contract, string name);
+
+
+        // Events subscription
+        [OperationContract]
+        /*Timer*/ void SubscribeAvailableVelibUpdatedEvent(VelibSoapContract contract, string name, int period);
+
     }
 
     [DataContract]

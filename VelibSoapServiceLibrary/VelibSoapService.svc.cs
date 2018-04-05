@@ -1,12 +1,19 @@
 ﻿using JCDecauxAPILibrary;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.ServiceModel;
+using System.Threading;
 
 namespace VelibSoapServiceLibrary
 {
     public class VelibSoapService : IVelibSoapService
     {
         private JCDecauxRESTClient jCDecauxRESTClient;
+        static Action<VelibSoapStation, int> availableVelibUpdatedEvent = delegate { };
+        static Dictionary<string, int> availableBikesByStation = new Dictionary<string, int>();
+        static List<Timer> timers = new List<Timer>();
+
 
         public VelibSoapService()
         {
@@ -95,6 +102,38 @@ namespace VelibSoapServiceLibrary
                 commercial_name = contract.CommercialName
             }).Select(s => s.name)
             .ToArray();
+        }
+
+        private void UpdateAvailableVelibUpdated(VelibSoapContract contract, string name)
+        {
+            Console.WriteLine("Event!");
+            VelibSoapStation station = GetStationByName(contract, name);
+            if (!availableBikesByStation.ContainsKey(name)) {
+                availableBikesByStation[name] = -1;
+            }
+            if (availableBikesByStation[name] != station.AvailableBikes)
+            {
+                availableBikesByStation[name] = station.AvailableBikes;
+                availableVelibUpdatedEvent(station, station.AvailableBikes);
+            }
+            availableVelibUpdatedEvent(station, station.AvailableBikes); //Debug: trigger event even if no change
+        }
+
+        public /*Timer*/ void SubscribeAvailableVelibUpdatedEvent(VelibSoapContract contract, string name, int period)
+        {
+            IVelibSoapServiceEvents subscriber = OperationContext.Current.GetCallbackChannel<IVelibSoapServiceEvents>();
+            availableVelibUpdatedEvent += subscriber.AvailableVelibUpdated;
+
+            Console.WriteLine("Subscribed: " + contract.Name + ", " + name + ", " + period);
+
+            var timer = new Timer(
+                e => UpdateAvailableVelibUpdated(contract, name),
+                null,
+                TimeSpan.Zero,
+                TimeSpan.FromSeconds(period));
+
+            timers.Add(timer);
+            //return timer;
         }
     }
 }

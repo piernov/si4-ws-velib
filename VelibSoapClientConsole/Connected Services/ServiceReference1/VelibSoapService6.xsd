@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/System.Timers" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/System.Timers" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:5050/VelibSoapService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/System.ComponentModel" />
+  <xs:complexType name="Timer">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/System.ComponentModel" base="q1:Component">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AutoReset" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Enabled" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Interval" type="xs:double" />
+          <xs:element minOccurs="0" name="SynchronizingObject" nillable="true" type="xs:anyType" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Timer" nillable="true" type="tns:Timer" />
+</xs:schema>

@@ -1,35 +1,44 @@
-﻿using ServiceReference1;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.ServiceModel;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
+using VelibSoapClientConsole.ServiceReference1;
 
 namespace VelibSoapClientConsole
 {
     public class Prompt
     {
         private VelibSoapServiceClient client;
+        private ServiceReference1.Timer eventTimer;
 
         string Help()
         {
             return @"Available commands:
-    help                                        — display this message
-    quit                                        — close the application
-    connect [url]                               — connect to the webservice with an optional url
-    list contracts                              — list contract names
-    list stations <contract name>               — list station names for a given contract
-    get contract <contract name>                — get details about a contract
-    get station <contract name> <station name>  — get details about a station of a contract
+    help                                                       — display this message
+    quit                                                       — close the application
+    connect [url]                                              — connect to the webservice with an optional url
+    list contracts                                             — list contract names
+    list stations <contract name>                              — list station names for a given contract
+    get contract <contract name>                               — get details about a contract
+    get station <contract name> <station name>                 — get details about a station of a contract
+    subscribe station <contract name> <station name> <period>  — subscribe to available bike changes
 Note: name containing whitespaces should be enclosed with """".";
         }
 
         string Connect(string[] args)
         {
+
+            VelibSoapServiceCallbackSink objsink = new VelibSoapServiceCallbackSink();
+            InstanceContext iCntxt = new InstanceContext(objsink);
+
             if (args.Length > 0)
-                client = new VelibSoapServiceClient(VelibSoapServiceClient.EndpointConfiguration.BasicHttpBinding_IVelibSoapService, args[0]);
+                client = new VelibSoapServiceClient(iCntxt, "", args[0]);
+                //client = new VelibSoapServiceClient(VelibSoapServiceClient.EndpointConfiguration.BasicHttpBinding_IVelibSoapService, args[0], iCntxt);
             else
-                client = new VelibSoapServiceClient();
+                client = new VelibSoapServiceClient(iCntxt);
             return "Connected to: " + client.Endpoint.Address;
         }
 
@@ -59,12 +68,12 @@ Note: name containing whitespaces should be enclosed with """".";
             {
                 case "contracts":
                     var contracts = await client.GetContractsNameAsync();
-                    return string.Join("\n", contracts.Body.GetContractsNameResult);
+                    return string.Join("\n", contracts);
                 case "stations":
                     var contract = await client.GetContractByNameAsync(args[1]);
-                    if (contract.Body.GetContractByNameResult == null) return "Contract " + args[1] + " not found";
-                    var stations = await client.GetStationsNameAsync(contract.Body.GetContractByNameResult);
-                    return string.Join("\n", stations.Body.GetStationsNameResult);
+                    if (contract == null) return "Contract " + args[1] + " not found";
+                    var stations = await client.GetStationsNameAsync(contract);
+                    return string.Join("\n", stations);
                 default:
                     return "";
             }
@@ -89,7 +98,7 @@ Note: name containing whitespaces should be enclosed with """".";
             string result = "";
             var command = args[0];
             var contractRes = await client.GetContractByNameAsync(args[1]);
-            var contract = contractRes.Body.GetContractByNameResult;
+            var contract = contractRes;
             if (contract == null) return "Contract " + args[1] + " not found";
             switch (args[0])
             {
@@ -101,7 +110,7 @@ Note: name containing whitespaces should be enclosed with """".";
                     break;
                 case "station":
                     var stationRes = await client.GetStationByNameAsync(contract, args[2]);
-                    var station = stationRes.Body.GetStationByNameResult;
+                    var station = stationRes;
                     if (station == null) return "Station " + args[1] + " not found in contract " + args[1];
                     result += "Name: " + station.Name + "\n";
                     result += "Number: " + station.Number + "\n";
@@ -113,6 +122,36 @@ Note: name containing whitespaces should be enclosed with """".";
                     break;
             }
             return result;
+        }
+
+        bool ValidateSubscribe(string[] args)
+        {
+            if (args.Length < 2) return false;
+            switch (args[0])
+            {
+                case "contract":
+                    /*return args.Length == 2;*/
+                    return false;
+                case "station":
+                    return args.Length == 4;
+                default:
+                    return false;
+            }
+        }
+
+        string Subscribe(string[] args)
+        {
+            var command = args[0];
+            var contractRes = client.GetContractByNameAsync(args[1]).Result;
+            var contract = contractRes;
+            if (contract == null) return "Contract " + args[1] + " not found";
+            switch (args[0])
+            {
+                case "station":
+                    eventTimer = client.SubscribeAvailableVelibUpdatedEvent(contract, args[2], Int32.Parse(args[3]));
+                    break;
+            }
+            return "Subscribed!";
         }
 
         async public Task Run()
@@ -152,6 +191,11 @@ Note: name containing whitespaces should be enclosed with """".";
                         if (!Connected()) result = "Not connected";
                         else if (!ValidateGet(args)) result = Help();
                         else result = await Get(args);
+                        break;
+                    case "subscribe":
+                        if (!Connected()) result = "Not connected";
+                        else if (!ValidateSubscribe(args)) result = Help();
+                        else result = Subscribe(args);
                         break;
                     default:
                         result = Help();
