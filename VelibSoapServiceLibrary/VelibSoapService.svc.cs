@@ -10,7 +10,6 @@ namespace VelibSoapServiceLibrary
     public class VelibSoapService : IVelibSoapService
     {
         private JCDecauxRESTClient jCDecauxRESTClient;
-        static Action<VelibSoapStation, int> availableVelibUpdatedEvent = delegate { };
         static Dictionary<string, int> availableBikesByStation = new Dictionary<string, int>();
         static List<Timer> timers = new List<Timer>();
 
@@ -104,7 +103,7 @@ namespace VelibSoapServiceLibrary
             .ToArray();
         }
 
-        private void UpdateAvailableVelibUpdated(VelibSoapContract contract, string name)
+        private void UpdateAvailableVelibUpdated(VelibSoapContract contract, string name, Action<VelibSoapStation, int> availableVelibUpdatedEvent)
         {
             Console.WriteLine("Event!");
             VelibSoapStation station = GetStationByName(contract, name);
@@ -122,12 +121,14 @@ namespace VelibSoapServiceLibrary
         public /*Timer*/ void SubscribeAvailableVelibUpdatedEvent(VelibSoapContract contract, string name, int period)
         {
             IVelibSoapServiceEvents subscriber = OperationContext.Current.GetCallbackChannel<IVelibSoapServiceEvents>();
+            Action<VelibSoapStation, int> availableVelibUpdatedEvent = delegate { };
+
             availableVelibUpdatedEvent += subscriber.AvailableVelibUpdated;
 
             Console.WriteLine("Subscribed: " + contract.Name + ", " + name + ", " + period);
 
             var timer = new Timer(
-                e => UpdateAvailableVelibUpdated(contract, name),
+                e => UpdateAvailableVelibUpdated(contract, name, availableVelibUpdatedEvent),
                 null,
                 TimeSpan.Zero,
                 TimeSpan.FromSeconds(period));
