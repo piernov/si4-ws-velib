@@ -17,7 +17,6 @@ namespace VelibSoapServiceLibrary
         {
             return jCDecauxRESTClient.GetContracts().Where(c => c.name == name).Select(c => new VelibSoapContract()
             {
-                Cities = c.cities.ToArray(),
                 Name = c.name,
                 CommercialName = c.commercial_name,
                 CountryCode = c.country_code
@@ -28,7 +27,6 @@ namespace VelibSoapServiceLibrary
         {
             return jCDecauxRESTClient.GetContracts().Select(c => new VelibSoapContract()
             {
-                Cities = c.cities.ToArray(),
                 Name = c.name,
                 CommercialName = c.commercial_name,
                 CountryCode = c.country_code
@@ -46,7 +44,6 @@ namespace VelibSoapServiceLibrary
         {
             return jCDecauxRESTClient.GetStations(new JCDecauxContract()
             {
-                cities = contract.Cities.ToList(),
                 name = contract.Name,
                 country_code = contract.CountryCode,
                 commercial_name = contract.CommercialName
@@ -68,7 +65,6 @@ namespace VelibSoapServiceLibrary
         {
             return jCDecauxRESTClient.GetStations(new JCDecauxContract()
             {
-                cities = contract.Cities.ToList(),
                 name = contract.Name,
                 country_code = contract.CountryCode,
                 commercial_name = contract.CommercialName
@@ -89,7 +85,6 @@ namespace VelibSoapServiceLibrary
         {
             return jCDecauxRESTClient.GetStations(new JCDecauxContract()
             {
-                cities = contract.Cities.ToList(),
                 name = contract.Name,
                 country_code = contract.CountryCode,
                 commercial_name = contract.CommercialName
